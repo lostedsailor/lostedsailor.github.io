@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="lostedsailor">
 <meta property="og:description" content="vim命令学习不定期更新">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-18T03:44:00.748Z">
+<meta property="og:updated_time" content="2019-06-18T04:51:34.151Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HowToUseVim">
 <meta name="twitter:description" content="vim命令学习不定期更新">
@@ -94,11 +94,15 @@
         <h2 id="vim命令学习不定期更新"><a href="#vim命令学习不定期更新" class="headerlink" title="vim命令学习不定期更新"></a><label style="color:yellow">vim命令学习不定期更新</label></h2><a id="more"></a>
 <h2 id="最近因为要使用vim-所以不定期更新新学到的vim干货-所有条目都将以“-gt-gt-gt-”开头"><a href="#最近因为要使用vim-所以不定期更新新学到的vim干货-所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="最近因为要使用vim,所以不定期更新新学到的vim干货.所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">最近因为要使用vim,所以不定期更新新学到的vim干货.所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-sudo-apt-get-install-vim"><a href="#gt-gt-gt-sudo-apt-get-install-vim" class="headerlink" title="&gt;&gt;&gt;sudo apt-get install vim"></a>&gt;&gt;&gt;sudo apt-get install vim</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">上来先下载vim，centos可能用yum版本。</span><br><span class="line">注意有一种可能的下载失败是apt-get没有更新。</span><br></pre></td></tr></table></figure>
 
+<h3 id="gt-gt-gt-翻页命令"><a href="#gt-gt-gt-翻页命令" class="headerlink" title="&gt;&gt;&gt;翻页命令"></a>&gt;&gt;&gt;翻页命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">向上翻页：ctrl+f</span><br><span class="line">向下翻页：ctrl+b</span><br><span class="line">（f代表forward，b代表back）</span><br><span class="line">---------------------------------</span><br><span class="line">向上翻半页：ctrl+u</span><br><span class="line">向下翻半页：ctrl+d</span><br><span class="line">---------------------------------</span><br><span class="line">向上滚一行：ctrl+e</span><br><span class="line">向下滚一行：ctrl+y</span><br><span class="line">---------------------------------</span><br><span class="line">zz让光标所在的行居于屏幕中间</span><br><span class="line">zt让光标所在的行居于屏幕最上方（t代表top）</span><br><span class="line">zb让光标所在的行居于屏幕最下方（b代表bottom）</span><br><span class="line">---------------------------------</span><br></pre></td></tr></table></figure>
+
+<h3 id="gt-gt-gt-vim按字符串在文件中搜索"><a href="#gt-gt-gt-vim按字符串在文件中搜索" class="headerlink" title="&gt;&gt;&gt;vim按字符串在文件中搜索"></a>&gt;&gt;&gt;vim按字符串在文件中搜索</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">从开头搜索</span><br><span class="line">在命令模式下，输入/你要查找的字符</span><br><span class="line">按下回车，可以看到vim把光标移动到该字符处</span><br><span class="line">再按n（小写）查看下一个匹配</span><br><span class="line">按N（大写）查看上一个匹配，</span><br><span class="line">----------------------------------</span><br><span class="line">从结尾处搜索</span><br><span class="line">？要搜索的字符串或字符</span><br><span class="line">----------------------------------</span><br><span class="line">搜索后，打开别的文件发现也被高亮了，怎么关闭</span><br><span class="line">命令行模式下，输入：nohlsearch</span><br><span class="line">也可以：<span class="built_in">set</span> nohlsearch </span><br><span class="line">可以简写成noh和<span class="built_in">set</span>-noh</span><br></pre></td></tr></table></figure>
+
 <h3 id="gt-gt-gt-新的使用干活正在出炉"><a href="#gt-gt-gt-新的使用干活正在出炉" class="headerlink" title="&gt;&gt;&gt;新的使用干活正在出炉"></a>&gt;&gt;&gt;新的使用干活正在出炉</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/18/HowToUseVim/" data-id="cjx19igp20000kgv4bsghx5bv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/18/HowToUseVim/" data-id="cjx1byyiv0000j8v4ixlxenip" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IDElearning/">IDElearning</a></li></ul>
