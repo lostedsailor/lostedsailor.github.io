@@ -5,18 +5,20 @@
   
 
   
-  <title>lostedsailor</title>
+  <title>HowToUseLinux(1) | lostedsailor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this is Li Guangming&apos;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lostedsailor">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Linux命令学习不定期更新">
+<meta name="keywords" content="SystemLearning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HowToUseLinux(1)">
+<meta property="og:url" content="http://yoursite.com/2019/06/19/HowToUseLinux/index.html">
 <meta property="og:site_name" content="lostedsailor">
-<meta property="og:description" content="this is Li Guangming&apos;s blog">
+<meta property="og:description" content="Linux命令学习不定期更新">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-19T02:55:43.144Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lostedsailor">
-<meta name="twitter:description" content="this is Li Guangming&apos;s blog">
+<meta name="twitter:title" content="HowToUseLinux(1)">
+<meta name="twitter:description" content="Linux命令学习不定期更新">
   
     <link rel="alternate" href="/atom.xml" title="lostedsailor" type="application/atom+xml">
   
@@ -67,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-HowToUseLinux" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-HowToUseLinux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/06/19/HowToUseLinux/" class="article-date">
   <time datetime="2019-06-19T02:46:00.000Z" itemprop="datePublished">2019-06-19</time>
@@ -82,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/19/HowToUseLinux/">HowToUseLinux(1)</a>
+    <h1 class="article-title" itemprop="name">
+      HowToUseLinux(1)
     </h1>
   
 
@@ -91,12 +91,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Linux命令学习不定期更新"><a href="#Linux命令学习不定期更新" class="headerlink" title="Linux命令学习不定期更新"></a><label style="color:blue">Linux命令学习不定期更新</label></h2>
-        
-          <p class="article-more-link">
-            <a href="/2019/06/19/HowToUseLinux/#more">Read More</a>
-          </p>
-        
+        <h2 id="Linux命令学习不定期更新"><a href="#Linux命令学习不定期更新" class="headerlink" title="Linux命令学习不定期更新"></a><label style="color:blue">Linux命令学习不定期更新</label></h2><a id="more"></a>
+<h2 id="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头"><a href="#这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地"><a href="#gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地" class="headerlink" title="&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地"></a>&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">使用<span class="string">"scp"</span>命令.</span><br><span class="line"><span class="string">"scp /home/work/source.txt work@192.168.0.10:/home/work/"</span>   </span><br><span class="line"><span class="comment">#把本地的source.txt文件拷贝到192.168.0.10机器上的/home/work目录下</span></span><br><span class="line"><span class="string">"scp work@192.168.0.10:/home/work/source.txt /home/work/"</span>   </span><br><span class="line"><span class="comment">#把192.168.0.10机器上的source.txt文件拷贝到本地的/home/work目录下</span></span><br><span class="line"><span class="string">"scp work@192.168.0.10:/home/work/source.txt work@192.168.0.11:/home/work/"</span>   </span><br><span class="line"><span class="comment">#把192.168.0.10机器上的source.txt文件拷贝到192.168.0.11机器的/home/work目录下</span></span><br><span class="line"><span class="string">"scp -r /home/work/sourcedir work@192.168.0.10:/home/work/"</span>   </span><br><span class="line"><span class="comment">#拷贝文件夹，加-r参数.其他的都同上</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="gt-gt-gt-未完待续"><a href="#gt-gt-gt-未完待续" class="headerlink" title="&gt;&gt;&gt;未完待续"></a>&gt;&gt;&gt;未完待续</h3>
       
     </div>
     <footer class="article-footer">
@@ -108,97 +106,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-HowToUseVim" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/18/HowToUseVim/" class="article-date">
-  <time datetime="2019-06-18T03:38:00.000Z" itemprop="datePublished">2019-06-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/18/HowToUseVim/">HowToUseVim</a>
-    </h1>
+    <a href="/2019/06/18/HowToUseVim/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HowToUseVim</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="vim命令学习不定期更新"><a href="#vim命令学习不定期更新" class="headerlink" title="vim命令学习不定期更新"></a><label style="color:yellow">vim命令学习不定期更新</label></h2>
-        
-          <p class="article-more-link">
-            <a href="/2019/06/18/HowToUseVim/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/18/HowToUseVim/" data-id="cjx2n6fcj0001m4v4l5g5uhyh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IDElearning/">IDElearning</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-aboutme" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/01/aboutme/" class="article-date">
-  <time datetime="2019-06-01T12:26:30.000Z" itemprop="datePublished">2019-06-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/01/aboutme/">aboutme</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a><label style="color:yellow">关于我</label></h2>
-        
-          <p class="article-more-link">
-            <a href="/2019/06/01/aboutme/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/01/aboutme/" data-id="cjx2n6fcw0006m4v4k2df9jxv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aboutme/">aboutme</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
