@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="lostedsailor">
 <meta property="og:description" content="Linux命令学习不定期更新">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-19T02:55:43.144Z">
+<meta property="og:updated_time" content="2019-06-24T02:22:22.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HowToUseLinux(1)">
 <meta name="twitter:description" content="Linux命令学习不定期更新">
@@ -94,11 +94,13 @@
         <h2 id="Linux命令学习不定期更新"><a href="#Linux命令学习不定期更新" class="headerlink" title="Linux命令学习不定期更新"></a><label style="color:blue">Linux命令学习不定期更新</label></h2><a id="more"></a>
 <h2 id="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头"><a href="#这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地"><a href="#gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地" class="headerlink" title="&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地"></a>&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">使用<span class="string">"scp"</span>命令.</span><br><span class="line"><span class="string">"scp /home/work/source.txt work@192.168.0.10:/home/work/"</span>   </span><br><span class="line"><span class="comment">#把本地的source.txt文件拷贝到192.168.0.10机器上的/home/work目录下</span></span><br><span class="line"><span class="string">"scp work@192.168.0.10:/home/work/source.txt /home/work/"</span>   </span><br><span class="line"><span class="comment">#把192.168.0.10机器上的source.txt文件拷贝到本地的/home/work目录下</span></span><br><span class="line"><span class="string">"scp work@192.168.0.10:/home/work/source.txt work@192.168.0.11:/home/work/"</span>   </span><br><span class="line"><span class="comment">#把192.168.0.10机器上的source.txt文件拷贝到192.168.0.11机器的/home/work目录下</span></span><br><span class="line"><span class="string">"scp -r /home/work/sourcedir work@192.168.0.10:/home/work/"</span>   </span><br><span class="line"><span class="comment">#拷贝文件夹，加-r参数.其他的都同上</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="gt-gt-gt-分配一个文件所有权限"><a href="#gt-gt-gt-分配一个文件所有权限" class="headerlink" title="&gt;&gt;&gt;分配一个文件所有权限"></a>&gt;&gt;&gt;分配一个文件所有权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">使用<span class="string">"chmod 777 filename"</span>可分配这个文件所有组件所有权限（读，写，执行）</span><br><span class="line">其他权限用的时候再看编号即可</span><br></pre></td></tr></table></figure>
+
 <h3 id="gt-gt-gt-未完待续"><a href="#gt-gt-gt-未完待续" class="headerlink" title="&gt;&gt;&gt;未完待续"></a>&gt;&gt;&gt;未完待续</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/19/HowToUseLinux/" data-id="cjx74sf6800044wv4u8odnw83" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/19/HowToUseLinux/" data-id="cjx9y00n00000iov4tnsttxje" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SystemLearning/">SystemLearning</a></li></ul>
@@ -109,10 +111,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2019/06/24/LearningAwk(Linux)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          LearnAwk(Linux)
+        
+      </div>
+    </a>
   
-    <a href="/2019/06/18/HowToUseVim/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2019/06/18/GitHub教程/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">HowToUseVim</div>
+      <div class="article-nav-title">GitHub教程</div>
     </a>
   
 </nav>
@@ -131,7 +142,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDElearning/">IDElearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SystemLearning/">SystemLearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aboutme/">aboutme</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDElearning/">IDElearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SystemLearning/">SystemLearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aboutme/">aboutme</a></li></ul>
     </div>
   </div>
 
@@ -141,7 +152,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/IDElearning/" style="font-size: 20px;">IDElearning</a> <a href="/tags/SystemLearning/" style="font-size: 10px;">SystemLearning</a> <a href="/tags/aboutme/" style="font-size: 10px;">aboutme</a>
+      <a href="/tags/IDElearning/" style="font-size: 20px;">IDElearning</a> <a href="/tags/ProgrammingLanguage/" style="font-size: 10px;">ProgrammingLanguage</a> <a href="/tags/SystemLearning/" style="font-size: 10px;">SystemLearning</a> <a href="/tags/aboutme/" style="font-size: 10px;">aboutme</a>
     </div>
   </div>
 
@@ -163,15 +174,19 @@
       <ul>
         
           <li>
+            <a href="/2019/06/24/LearningAwk(Linux)/">LearnAwk(Linux)</a>
+          </li>
+        
+          <li>
             <a href="/2019/06/19/HowToUseLinux/">HowToUseLinux(1)</a>
           </li>
         
           <li>
-            <a href="/2019/06/18/HowToUseVim/">HowToUseVim</a>
+            <a href="/2019/06/18/GitHub教程/">GitHub教程</a>
           </li>
         
           <li>
-            <a href="/2019/06/18/GitHub教程/">GitHub教程</a>
+            <a href="/2019/06/18/HowToUseVim/">HowToUseVim</a>
           </li>
         
           <li>
