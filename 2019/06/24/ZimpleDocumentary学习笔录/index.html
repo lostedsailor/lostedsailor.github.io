@@ -5,20 +5,20 @@
   
 
   
-  <title>HowToUseLinux(1) | lostedsailor</title>
+  <title>ZimpleDocumentary学习笔录 | lostedsailor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux命令学习不定期更新">
-<meta name="keywords" content="SystemLearning">
+  <meta name="description" content="这个东西用于把编写zpl的">
+<meta name="keywords" content="ProgrammingLanguage">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HowToUseLinux(1)">
-<meta property="og:url" content="http://yoursite.com/2019/06/19/HowToUseLinux/index.html">
+<meta property="og:title" content="ZimpleDocumentary学习笔录">
+<meta property="og:url" content="http://yoursite.com/2019/06/24/ZimpleDocumentary学习笔录/index.html">
 <meta property="og:site_name" content="lostedsailor">
-<meta property="og:description" content="Linux命令学习不定期更新">
+<meta property="og:description" content="这个东西用于把编写zpl的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-24T02:22:22.802Z">
+<meta property="og:updated_time" content="2019-06-25T05:25:29.983Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HowToUseLinux(1)">
-<meta name="twitter:description" content="Linux命令学习不定期更新">
+<meta name="twitter:title" content="ZimpleDocumentary学习笔录">
+<meta name="twitter:description" content="这个东西用于把编写zpl的">
   
     <link rel="alternate" href="/atom.xml" title="lostedsailor" type="application/atom+xml">
   
@@ -69,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-HowToUseLinux" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ZimpleDocumentary学习笔录" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/06/19/HowToUseLinux/" class="article-date">
-  <time datetime="2019-06-19T02:46:00.000Z" itemprop="datePublished">2019-06-19</time>
+    <a href="/2019/06/24/ZimpleDocumentary学习笔录/" class="article-date">
+  <time datetime="2019-06-24T07:29:00.000Z" itemprop="datePublished">2019-06-24</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      HowToUseLinux(1)
+      ZimpleDocumentary学习笔录
     </h1>
   
 
@@ -91,19 +91,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Linux命令学习不定期更新"><a href="#Linux命令学习不定期更新" class="headerlink" title="Linux命令学习不定期更新"></a><label style="color:blue">Linux命令学习不定期更新</label></h2><a id="more"></a>
-<h2 id="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头"><a href="#这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地"><a href="#gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地" class="headerlink" title="&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地"></a>&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">使用<span class="string">"scp"</span>命令.</span><br><span class="line"><span class="string">"scp /home/work/source.txt work@192.168.0.10:/home/work/"</span>   </span><br><span class="line"><span class="comment">#把本地的source.txt文件拷贝到192.168.0.10机器上的/home/work目录下</span></span><br><span class="line"><span class="string">"scp work@192.168.0.10:/home/work/source.txt /home/work/"</span>   </span><br><span class="line"><span class="comment">#把192.168.0.10机器上的source.txt文件拷贝到本地的/home/work目录下</span></span><br><span class="line"><span class="string">"scp work@192.168.0.10:/home/work/source.txt work@192.168.0.11:/home/work/"</span>   </span><br><span class="line"><span class="comment">#把192.168.0.10机器上的source.txt文件拷贝到192.168.0.11机器的/home/work目录下</span></span><br><span class="line"><span class="string">"scp -r /home/work/sourcedir work@192.168.0.10:/home/work/"</span>   </span><br><span class="line"><span class="comment">#拷贝文件夹，加-r参数.其他的都同上</span></span><br></pre></td></tr></table></figure>
+        <h2 id="这个东西用于把编写zpl的"><a href="#这个东西用于把编写zpl的" class="headerlink" title="这个东西用于把编写zpl的"></a><label style="color:yellow">这个东西用于把编写zpl的</label></h2><a id="more"></a>
+<h2 id="没中文教程，这里做一个对英文教程学习的笔记-英文教程就是zimple官网提供的documentary"><a href="#没中文教程，这里做一个对英文教程学习的笔记-英文教程就是zimple官网提供的documentary" class="headerlink" title="没中文教程，这里做一个对英文教程学习的笔记,英文教程就是zimple官网提供的documentary"></a><label style="color:red">没中文教程，这里做一个对英文教程学习的笔记,英文教程就是zimple官网提供的documentary</label></h2><h3 id="gt-gt-gt-表达式"><a href="#gt-gt-gt-表达式" class="headerlink" title="&gt;&gt;&gt;表达式"></a>&gt;&gt;&gt;表达式</h3><h4 id="gt-gt-gt-数字的表达式"><a href="#gt-gt-gt-数字的表达式" class="headerlink" title="&gt;&gt;&gt;数字的表达式"></a>&gt;&gt;&gt;数字的表达式</h4><label style="color:green">
+    数字表达式以及具体的一些数学函数使用可一看documentary本身那个表，很明确。
+    官方说这里涉及的所有数字计算的精度都是默认double的
+</label>
 
-<h3 id="gt-gt-gt-分配一个文件所有权限"><a href="#gt-gt-gt-分配一个文件所有权限" class="headerlink" title="&gt;&gt;&gt;分配一个文件所有权限"></a>&gt;&gt;&gt;分配一个文件所有权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">使用<span class="string">"chmod 777 filename"</span>可分配这个文件所有组件所有权限（读，写，执行）</span><br><span class="line">其他权限用的时候再看编号即可</span><br></pre></td></tr></table></figure>
+<h4 id="gt-gt-gt-字符串表达式"><a href="#gt-gt-gt-字符串表达式" class="headerlink" title="&gt;&gt;&gt;字符串表达式"></a>&gt;&gt;&gt;字符串表达式</h4><label style="color:blue">
 
-<h3 id="gt-gt-gt-未完待续"><a href="#gt-gt-gt-未完待续" class="headerlink" title="&gt;&gt;&gt;未完待续"></a>&gt;&gt;&gt;未完待续</h3>
+
+</label>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/19/HowToUseLinux/" data-id="cjxa281g40003scv4hl1jtwuh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/24/ZimpleDocumentary学习笔录/" data-id="cjxa281g90008scv4icfxt5rg" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SystemLearning/">SystemLearning</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>
 
     </footer>
   </div>
@@ -111,19 +115,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/06/24/LearningAwk(Linux)/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          LearnAwk(Linux)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/18/GitHub教程/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/06/24/LearningAwk(Linux)/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">GitHub教程</div>
+      <div class="article-nav-title">LearnAwk(Linux)</div>
     </a>
   
 </nav>
