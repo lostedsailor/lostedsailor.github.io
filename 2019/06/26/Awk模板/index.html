@@ -5,18 +5,20 @@
   
 
   
-  <title>Tag: SystemLearning | lostedsailor</title>
+  <title>Awk模板 | lostedsailor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this is Li Guangming&apos;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lostedsailor">
-<meta property="og:url" content="http://yoursite.com/tags/SystemLearning/index.html">
+  <meta name="description" content="Awk模板">
+<meta name="keywords" content="muban">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Awk模板">
+<meta property="og:url" content="http://yoursite.com/2019/06/26/Awk模板/index.html">
 <meta property="og:site_name" content="lostedsailor">
-<meta property="og:description" content="this is Li Guangming&apos;s blog">
+<meta property="og:description" content="Awk模板">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-26T14:44:43.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lostedsailor">
-<meta name="twitter:description" content="this is Li Guangming&apos;s blog">
+<meta name="twitter:title" content="Awk模板">
+<meta name="twitter:description" content="Awk模板">
   
     <link rel="alternate" href="/atom.xml" title="lostedsailor" type="application/atom+xml">
   
@@ -67,40 +69,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/06/19/HowToUseLinux/" class="archive-article-date">
-  <time datetime="2019-06-19T02:46:00.000Z" itemprop="datePublished">Jun 19</time>
+        <section id="main"><article id="post-Awk模板" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/26/Awk模板/" class="article-date">
+  <time datetime="2019-06-26T14:38:00.000Z" itemprop="datePublished">2019-06-26</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/19/HowToUseLinux/">HowToUseLinux(1)</a>
+    <h1 class="article-title" itemprop="name">
+      Awk模板
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Awk模板"><a href="#Awk模板" class="headerlink" title="Awk模板"></a><label style="color:blue">Awk模板</label></h2><a id="more"></a>
+<h2 id="自己用的模板"><a href="#自己用的模板" class="headerlink" title="自己用的模板"></a><label style="color:red">自己用的模板</label></h2><h3 id="gt-gt-gt-ppppppp-awk-注意最后别漏文件名"><a href="#gt-gt-gt-ppppppp-awk-注意最后别漏文件名" class="headerlink" title="&gt;&gt;&gt;ppppppp.awk(注意最后别漏文件名)"></a>&gt;&gt;&gt;ppppppp.awk(注意最后别漏文件名)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">awk <span class="string">'&#123;</span></span><br><span class="line"><span class="string">		len = split($0 , table , ",");</span></span><br><span class="line"><span class="string">		if(table[1]!="j")</span></span><br><span class="line"><span class="string">			for(  i = 3 ; i &lt;= len ;i++)</span></span><br><span class="line"><span class="string">			&#123;</span></span><br><span class="line"><span class="string">				printf "%s %s\n",table[1],table[i];</span></span><br><span class="line"><span class="string">			&#125;</span></span><br><span class="line"><span class="string">&#125;'</span> Y.csv</span><br></pre></td></tr></table></figure>
 
+<h3 id="gt-gt-gt-qqqqqqqqq-awk"><a href="#gt-gt-gt-qqqqqqqqq-awk" class="headerlink" title="&gt;&gt;&gt;qqqqqqqqq.awk"></a>&gt;&gt;&gt;qqqqqqqqq.awk</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">awk <span class="string">'&#123;</span></span><br><span class="line"><span class="string">	len = split($0 , table , ",");</span></span><br><span class="line"><span class="string">	if(table[1]!= "j")</span></span><br><span class="line"><span class="string">		for(i = 2; i &lt;= len ;i ++)</span></span><br><span class="line"><span class="string">		&#123;</span></span><br><span class="line"><span class="string">			printf "%s %s\n" ,table[1],table[i];</span></span><br><span class="line"><span class="string">		&#125;</span></span><br><span class="line"><span class="string">&#125;'</span> YrelateY.csv</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/26/Awk模板/" data-id="cjxdd6ab20000zcv4mf418bab" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/muban/">muban</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/26/Zpl模板/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Zpl模板
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/24/ZimpleDocumentary学习笔录/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ZimpleDocumentary学习笔录</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
