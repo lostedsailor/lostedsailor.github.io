@@ -7,18 +7,18 @@
   
   <title>ZimpleDocumentary学习笔录 | lostedsailor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这个东西用于把编写zpl的">
+  <meta name="description" content="这个东西是用于编写zpl的">
 <meta name="keywords" content="ProgrammingLanguage">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ZimpleDocumentary学习笔录">
 <meta property="og:url" content="http://yoursite.com/2019/06/24/ProgrammingLanguage/ZimpleDocumentary学习笔录/index.html">
 <meta property="og:site_name" content="lostedsailor">
-<meta property="og:description" content="这个东西用于把编写zpl的">
+<meta property="og:description" content="这个东西是用于编写zpl的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-25T11:09:51.492Z">
+<meta property="og:updated_time" content="2019-07-12T10:47:07.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZimpleDocumentary学习笔录">
-<meta name="twitter:description" content="这个东西用于把编写zpl的">
+<meta name="twitter:description" content="这个东西是用于编写zpl的">
   
     <link rel="alternate" href="/atom.xml" title="lostedsailor" type="application/atom+xml">
   
@@ -91,20 +91,101 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="这个东西用于把编写zpl的"><a href="#这个东西用于把编写zpl的" class="headerlink" title="这个东西用于把编写zpl的"></a><label style="color:yellow">这个东西用于把编写zpl的</label></h2><a id="more"></a>
-<h2 id="没中文教程，这里做一个对英文教程学习的笔记-英文教程就是zimple官网提供的documentary"><a href="#没中文教程，这里做一个对英文教程学习的笔记-英文教程就是zimple官网提供的documentary" class="headerlink" title="没中文教程，这里做一个对英文教程学习的笔记,英文教程就是zimple官网提供的documentary"></a><label style="color:red">没中文教程，这里做一个对英文教程学习的笔记,英文教程就是zimple官网提供的documentary</label></h2><h3 id="gt-gt-gt-表达式"><a href="#gt-gt-gt-表达式" class="headerlink" title="&gt;&gt;&gt;表达式"></a>&gt;&gt;&gt;表达式</h3><h4 id="gt-gt-gt-数字的表达式"><a href="#gt-gt-gt-数字的表达式" class="headerlink" title="&gt;&gt;&gt;数字的表达式"></a>&gt;&gt;&gt;数字的表达式</h4><label style="color:green">
-    数字表达式以及具体的一些数学函数使用可一看documentary本身那个表，很明确。
-    官方说这里涉及的所有数字计算的精度都是默认double的
+        <h2 id="这个东西是用于编写zpl的"><a href="#这个东西是用于编写zpl的" class="headerlink" title="这个东西是用于编写zpl的"></a><label style="color:yellow">这个东西是用于编写zpl的</label></h2><a id="more"></a>
+<h4 id="没中文教程，这里做一个对英文教程学习的笔记-英文教程就是zimple官网提供的documentary。其中会用到awk来处理文件，awk是属于命令行级别的语言，语法和操作都非常简单，文中会介绍"><a href="#没中文教程，这里做一个对英文教程学习的笔记-英文教程就是zimple官网提供的documentary。其中会用到awk来处理文件，awk是属于命令行级别的语言，语法和操作都非常简单，文中会介绍" class="headerlink" title="没中文教程，这里做一个对英文教程学习的笔记,英文教程就是zimple官网提供的documentary。其中会用到awk来处理文件，awk是属于命令行级别的语言，语法和操作都非常简单，文中会介绍"></a><label style="color:red">没中文教程，这里做一个对英文教程学习的笔记,英文教程就是zimple官网提供的documentary。其中会用到awk来处理文件，awk是属于命令行级别的语言，语法和操作都非常简单，文中会介绍</label></h4><h2 id="gt-gt-gt-gt-简化教程"><a href="#gt-gt-gt-gt-简化教程" class="headerlink" title="&gt;&gt;&gt;&gt;简化教程"></a>&gt;&gt;&gt;&gt;简化教程</h2><p><label style="color:blue">这篇学习笔录本来是想写一篇同步官方documentary的中文同步教程。但是应学姐要求，我先出一篇简化教程，如果时间不多，仅仅看这个简化教程模块来建模一个规划问题模型是完全够用的。<br><br>为了更清楚的说明问题。我直接同步我的一个样例模板（见本博客博文“Zpl模板”）来讲解，请开一个新的浏览器窗口来打开我的博文“Zpl模板”，对照学习。<br><br></label></p>
+<h3 id="gt-gt-gt-zpl文件元素"><a href="#gt-gt-gt-zpl文件元素" class="headerlink" title="&gt;&gt;&gt; zpl文件元素"></a>&gt;&gt;&gt; zpl文件元素</h3><label style="color:green">
+我们都知道，一个规划问题由变量，目标函数，约束，三大部分构成。那么zpl文件整个的目的就是描述清楚这三个东西。<br>官方通过“元组”为单元，再进一步构建集合，常数以及定值表来完成这个操作。其实为了建一个模型，完全不必要了解这么多这么详细的东西。我们只需要仅仅学习两个概念“集合”和“常数”即可。然后就是相关语法，相信读完此教程你会很容易的完成建模。
 </label>
 
-<h4 id="gt-gt-gt-字符串表达式"><a href="#gt-gt-gt-字符串表达式" class="headerlink" title="&gt;&gt;&gt;字符串表达式"></a>&gt;&gt;&gt;字符串表达式</h4><label style="color:blue">
-
-
+<h4 id="gt-gt-常数"><a href="#gt-gt-常数" class="headerlink" title="&gt;&gt;常数"></a>&gt;&gt;常数</h4><label style="color:green">
+没啥说的，字面意思。或者在模型里有时候被叫做“参数”。<br>
+声明方法为，“param name := 521521”。<br>
+在模板“problem2.zpl”中有很多这样的定义，也很直观。<br>
 </label>
+
+
+<h4 id="gt-gt-集合"><a href="#gt-gt-集合" class="headerlink" title="&gt;&gt;集合"></a>&gt;&gt;集合</h4><label style="color:green">
+这部分用到了sum和forall语句，后面会讲，这里能理解大概是啥就行<br>
+对于zpl中集合的元素，我们可以理解为多维或者一维向量。一维向量主要是针对“一部分变量加和小于等于或者大于等于某值”这样的约束，来从变量中取“这么一部分”变量用的。<br>
+相应的高维元素，差不多也是这么一个感觉，只是多了一个相关元，这里我们一般用到二维的就够了(这里讲一个例子):<br>
+比如对于约束 “y[j] >= sum(x[i,j])”。<br>
+这个约束中对于一个j有多个i与之对应。<br>
+我们假设文件中的某一行是“3，2，3，4，7，9 ”.<br>
+代表 x[2] + x[3] + x[4] + x[7] + x[9] <= y[3]这条约束<br>
+那么我们首先要把“3，2，3，4，7，9” 处理为（这个处理方法要用awk，方法详见本博客博文“Awk教程”）：<br>
+“<br>
+3,2<br>
+3,3<br>
+3,4<br>
+3,7<br>
+3,9<br>
+”<br>
+这样一个表。它相当于一个集合。集合中元素就是<3,2><3,3><3,4><3,7><3,9>这样的一个个二维数组<br>
+假设集合名字叫 sister。那么我们通过如下语句描述这条约束<br>
+</3,9></3,7></3,4></3,3></3,2></=></label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subto 约束name : sum &lt;i,j&gt; <span class="keyword">in</span> sister : x[i] &lt;= y[j]</span><br></pre></td></tr></table></figure>
+
+<label style="color:green">
+problem2.zpl模板中也有很多这样的约束<br>
+=======<br>
+接着这个例子讲<br>
+如过有多个约束呢？比如我们的j要遍历到所有的y，对于每一个j都有一个对应于j的i的集合。<br>
+很简单，我们仿照上面那个表，相当于构建了如下一个表：<br>
+“<br>
+3,2<br>
+3,3<br>
+3,4<br>
+3,7<br>
+3,9<br>
+4,1<br>
+4,2<br>
+4,10<br>
+5,4<br>
+6,3<br>
+”<br>
+假设我们的集合Iy代表了y的所有元素<br>
+那么我们用如下语句描述这条约束：<br>
+</label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">subto 约束name : forall &lt;j&gt; <span class="keyword">in</span> Iy <span class="keyword">do</span> &lt;br&gt; </span><br><span class="line"> 				 sum &lt;i,j&gt; <span class="keyword">in</span> sister : x[i] &lt;= y[j]</span><br></pre></td></tr></table></figure>
+
+<label style="color:green">
+problem2.zpl模板中也有很多这样的约束<br>
+那么j如果不是针对所有的y呢？很简单，我们的Iy集合只需要改为那个所要求的y的集合即可。<br>
+</label>
+
+
+<h3 id="gt-gt-gt-zpl文件语法"><a href="#gt-gt-gt-zpl文件语法" class="headerlink" title="&gt;&gt;&gt; zpl文件语法"></a>&gt;&gt;&gt; zpl文件语法</h3><h4 id="gt-gt-设置常数"><a href="#gt-gt-设置常数" class="headerlink" title="&gt;&gt;设置常数"></a>&gt;&gt;设置常数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">param yipusen_1 := 99750.0;</span><br></pre></td></tr></table></figure>
+
+<h4 id="gt-gt-设置集合"><a href="#gt-gt-设置集合" class="headerlink" title="&gt;&gt;设置集合"></a>&gt;&gt;设置集合</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> Ix := &#123;0 .. (Xnum-1)&#125;;</span><br><span class="line">//这个代表从零到Xnum-1的所有整数，所构成的集合。这种集合一般是遍历变量所用的集合。</span><br><span class="line"><span class="built_in">set</span> x_yy := &#123;<span class="built_in">read</span> <span class="string">"X@x-~y"</span> as <span class="string">"&lt;1n,2n&gt;"</span>&#125;;</span><br><span class="line">//这种相当于通过读文件的方法读集合。文件中每一行对应集合的一个元素。&lt;1n,2n&gt;代表文件中每一行读入第一列和第二列，并且视为数字。n代表number。1和2代表第一列第二列。</span><br><span class="line"><span class="built_in">set</span> x_yy := &#123;<span class="built_in">read</span> <span class="string">"X@x-~y"</span> as <span class="string">"&lt;1n,3n&gt;"</span>&#125;;</span><br><span class="line">//同样上面的例子改了一点。代表读文件每一行的第一列和第三列。以数字的格式读入。这个集合元素也相当于一个个二元数组。由此看来zpl本身也自带那么一点文件处理能力的。</span><br></pre></td></tr></table></figure>
+
+<h4 id="gt-gt-forall语句"><a href="#gt-gt-forall语句" class="headerlink" title="&gt;&gt;forall语句"></a>&gt;&gt;forall语句</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//如果集合是元素是一维的那么如下</span><br><span class="line">forall &lt;i&gt; <span class="keyword">in</span> 集合名 <span class="keyword">do</span></span><br><span class="line">	语句</span><br><span class="line">//这样的语法，相当于对于这个集合中每一个元素，都执行语句。从而实现定义多个约束 。</span><br><span class="line">//如果集合元素是高维</span><br><span class="line">forall &lt;i,j,k&gt; <span class="keyword">in</span> 集合名 <span class="keyword">do</span></span><br><span class="line">	语句</span><br><span class="line">//注意！！！！！其中i，j，k相当于声明变量了，语句中可以直接用。你也可以直接 forall &lt;3,j,k&gt; <span class="keyword">in</span> 集合名 <span class="keyword">do</span>。这样子，来抽取集合中所有第一个元素是3的。这个用法很关键。</span><br></pre></td></tr></table></figure>
+
+<h4 id="gt-gt-sum-语句"><a href="#gt-gt-sum-语句" class="headerlink" title="&gt;&gt;sum 语句"></a>&gt;&gt;sum 语句</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum &lt;j,k&gt; <span class="keyword">in</span> y_zz:y[j]</span><br><span class="line">//代表y_zz中所有元素，y[j]相加</span><br><span class="line">//也就是说sum语句不会像forall一样执行多次从而相当于生成多个约束或者多个语句。sum相当于我们数学中的连加符号。</span><br><span class="line">//注意！！！！！！sum &lt;i&gt; <span class="keyword">in</span> Ix <span class="keyword">do</span>.这样也是可以的。也就是说sum语句最后<span class="keyword">do</span>或者冒号都可以。而forall只能是<span class="keyword">do</span>。</span><br></pre></td></tr></table></figure>
+
+<h4 id="gt-gt-设置变量"><a href="#gt-gt-设置变量" class="headerlink" title="&gt;&gt;设置变量"></a>&gt;&gt;设置变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var z[Iz] binary;</span><br><span class="line">//代表变量z，Iz是个集合，它的声明见实例。binary代表z是一个0，1变量。学姐暂时只用到01，别的变量声明方法见documentary或者直接问我。</span><br></pre></td></tr></table></figure>
+
+<h4 id="gt-gt-设置目标函数"><a href="#gt-gt-设置目标函数" class="headerlink" title="&gt;&gt;设置目标函数"></a>&gt;&gt;设置目标函数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">模板中有两个。参考模板最大目标和最小目标都有。</span><br></pre></td></tr></table></figure>
+
+<h4 id="gt-gt-设置约束"><a href="#gt-gt-设置约束" class="headerlink" title="&gt;&gt;设置约束"></a>&gt;&gt;设置约束</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">模板中subto开头的，非常直观，不再赘述。</span><br></pre></td></tr></table></figure>
+
+<h4 id="gt-gt-with-语句"><a href="#gt-gt-with-语句" class="headerlink" title="&gt;&gt;with 语句"></a>&gt;&gt;with 语句</h4><label style="color:green">
+这东西相当于添加限制条件，从而不去对sum in 或者 forall in 的集合的所有元素都执行:<br>
+</label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">可以是 with <span class="keyword">in</span> 集合名。通过一个集合来限制。</span><br><span class="line">也可以 with <span class="keyword">in</span> 表达式。</span><br><span class="line">比如 “ forall &lt;i&gt; <span class="keyword">in</span> Ix with i&lt;10 : ”</span><br><span class="line">这样的语句来让forall只针对前10个i来进行处理。</span><br></pre></td></tr></table></figure>
+
+<h2 id="gt-gt-gt-gt-同步教程"><a href="#gt-gt-gt-gt-同步教程" class="headerlink" title="&gt;&gt;&gt;&gt;同步教程"></a>&gt;&gt;&gt;&gt;同步教程</h2><label style="color:blue">
+这个有时间我写把，虽然我估计这事儿就扔这儿了，哈哈。
+</label>
+
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/24/ProgrammingLanguage/ZimpleDocumentary学习笔录/" data-id="cjxzk5q7n0005pkv4ihaf6m0q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/24/ProgrammingLanguage/ZimpleDocumentary学习笔录/" data-id="cjxzw22fs0009vsv4y1ao5vqb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>
@@ -146,7 +227,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDElearning/">IDElearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SystemLearning/">SystemLearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aboutme/">aboutme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/muban/">muban</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDElearning/">IDElearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SystemLearning/">SystemLearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aboutme/">aboutme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/muban/">muban</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/strategy/">strategy</a></li></ul>
     </div>
   </div>
 
@@ -156,7 +237,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/IDElearning/" style="font-size: 15px;">IDElearning</a> <a href="/tags/ProgrammingLanguage/" style="font-size: 20px;">ProgrammingLanguage</a> <a href="/tags/SystemLearning/" style="font-size: 10px;">SystemLearning</a> <a href="/tags/aboutme/" style="font-size: 10px;">aboutme</a> <a href="/tags/muban/" style="font-size: 15px;">muban</a>
+      <a href="/tags/IDElearning/" style="font-size: 15px;">IDElearning</a> <a href="/tags/ProgrammingLanguage/" style="font-size: 20px;">ProgrammingLanguage</a> <a href="/tags/SystemLearning/" style="font-size: 10px;">SystemLearning</a> <a href="/tags/aboutme/" style="font-size: 10px;">aboutme</a> <a href="/tags/muban/" style="font-size: 15px;">muban</a> <a href="/tags/strategy/" style="font-size: 10px;">strategy</a>
     </div>
   </div>
 
@@ -178,6 +259,10 @@
       <ul>
         
           <li>
+            <a href="/2019/07/12/strategy/优化问题建模方法/">规划问题建模方法</a>
+          </li>
+        
+          <li>
             <a href="/2019/07/12/ProgrammingLanguage/c语言教程/">c语言教程</a>
           </li>
         
@@ -191,10 +276,6 @@
         
           <li>
             <a href="/2019/06/26/muban/Awk模板/">Awk模板</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/24/ProgrammingLanguage/ZimpleDocumentary学习笔录/">ZimpleDocumentary学习笔录</a>
           </li>
         
       </ul>
