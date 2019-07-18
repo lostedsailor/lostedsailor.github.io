@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="lostedsailor">
 <meta property="og:description" content="Awk学习不定期更新">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-29T03:20:16.756Z">
+<meta property="og:updated_time" content="2019-07-18T06:48:42.897Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Awk教程">
 <meta name="twitter:description" content="Awk学习不定期更新">
@@ -92,13 +92,61 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Awk学习不定期更新"><a href="#Awk学习不定期更新" class="headerlink" title="Awk学习不定期更新"></a><label style="color:blue">Awk学习不定期更新</label></h2><a id="more"></a>
-<h2 id="AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！所有条目都将以“-gt-gt-gt-”开头"><a href="#AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-未完待续"><a href="#gt-gt-gt-未完待续" class="headerlink" title="&gt;&gt;&gt;未完待续"></a>&gt;&gt;&gt;未完待续</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~~~~~~~~~~~</span><br></pre></td></tr></table></figure>
+<h2 id="AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！所有条目都将以“-gt-gt-gt-”开头"><a href="#AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h2 id="gt-gt-gt-gt-入门教程"><a href="#gt-gt-gt-gt-入门教程" class="headerlink" title="&gt;&gt;&gt;&gt;入门教程"></a>&gt;&gt;&gt;&gt;入门教程</h2><label style="color:blue">
+首先，和zimple一样，请开一个新的页面打开我的<a href="https://lostedsailor.github.io/2019/06/26/muban/Awk%E6%A8%A1%E6%9D%BF/#more" target="_blank" rel="noopener">awk模板</a>，我们对照模板开始讲解。<br>
+awk是命令语言，也就是说在bash（命令行）界面，基本上可以完成awk的所有操作。<br>
+但是考虑到代码的复用性，我们往往写成一个脚本。awk模板的前两个就是写了个脚本。然后执行。为了建模，我们其实了解目前模板内容足以。日后对于更加复杂点的模型需要更多的awk的处理方式，我将在下面命令板块补充awk的命令<br>
+接下来分几个子版块说明一下使用awk的原因以及语法<br>
+</label>
+
+<h3 id="gt-gt-gt-awk的任务"><a href="#gt-gt-gt-awk的任务" class="headerlink" title="&gt;&gt;&gt;awk的任务"></a>&gt;&gt;&gt;awk的任务</h3><label style="color:blue">
+在我们的zpl教程中，或者说zpl模板中，经常出现以下模式的语句：<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> z_all := &#123;<span class="built_in">read</span> <span class="string">"Zall"</span> as <span class="string">"&lt;1n,2n,3n,4n&gt;"</span>&#125;;</span><br><span class="line"></span><br><span class="line">subto Z_all_1:</span><br><span class="line">	sum &lt;k,0,m,n&gt; <span class="keyword">in</span> z_all:z[k]*m &gt;= yipusen_1;</span><br><span class="line"></span><br><span class="line">subto Z_all_2:</span><br><span class="line">	sum &lt;k,1,m,n&gt; <span class="keyword">in</span> z_all:z[k]*m &gt;= yipusen_2;</span><br></pre></td></tr></table></figure>
+
+<p>这些语句的作用相信看过zpl教程的人都一定很明确。 <br><br>简单说一下就是Zall是一个四列的表。我们利用了文件读入的方式来定义 z_all 集合  <br><br>z_all集合的元素就是相当于一个个四维的向量或者叫元组 <br><br>然后利用z_all集合来定义几个约束 <br><br><br><br>那么明显，我们awk的使命就是做出Zall这个文件来让awk来读。因为模型给我们的文件往往不是很标准的四列的数据。<br><br>同时请注意，模型有时候会出现列数不确定的情况。比如第一列代表x的下表i。后面代表和x[i]相关的的y的下标j。不同的i对应的j的数量不确定<br><br>这种算一种典型的情况，在zpl教程中我们提到过。<br><br>比如模型如下：<br></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 6</span><br><span class="line">2 4 6 7 8 9</span><br><span class="line">3 2 5</span><br></pre></td></tr></table></figure>
+
+<p>代表的是，x[1] 分别和 y[2],y[3],y[4],y[6]相关<br><br>x[2] 分别和 y[4],y[6],y[7],y[8],y[9]相关<br><br>x[3] 分别和 y[2],y[5]相关<br><br><br><br>那么我们需要用awk把上面的模型处理成如下形式:<br></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1 2</span><br><span class="line">1 3</span><br><span class="line">1 4</span><br><span class="line">1 6</span><br><span class="line">2 4</span><br><span class="line">2 6 </span><br><span class="line">2 7 </span><br><span class="line">2 8</span><br><span class="line">2 9</span><br><span class="line">3 2</span><br><span class="line">3 5</span><br></pre></td></tr></table></figure>
+
+<p>如此以来<br><br>我们就可以用forall语句或者sum语句来表达出任何形状的约束或者目标函数的表达式<br><br>这个例子说明了awk的使命，因为模型型除了上面的情况，往往第一行不是数据而是表头，让人们容易知道每一列是什么。<br><br>zpl读入则不需要这些表头，可以用zpl内置的语句忽略这一行。但是我们为了简便，往往利用awk把这行处理掉。<br><br></p></label><p></p>
+<h3 id="gt-gt-gt-awk的语法"><a href="#gt-gt-gt-awk的语法" class="headerlink" title="&gt;&gt;&gt;awk的语法"></a>&gt;&gt;&gt;awk的语法</h3><label style="color:blue">
+首先，awk的语法都是“awk '{ 命令 }' filename ”的格式，相当于直接在命令行（黑框或者叫bash）处执行awk的命令。注意外面的filename就是我们要处理的目标文件<br>
+前面说过为了一些原因，我们把它写成脚本，然后“chmod 777 filename.awk”给个权限然后来执行（这里后缀不一定要.awk，起什么名字都可以）<br>
+<br>
+然后为了建模我们学习一个split函数足矣<br>
+我们看模板第一个awk命令。split的语法格式是：<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">len = split(<span class="variable">$0</span> , table , <span class="string">","</span>);</span><br></pre></td></tr></table></figure>
+
+<p>按顺序，返回值len（你可以起成任何名字）代表读取的元素数。遍历的时候会用。<br><br>$0,代表的是整行读入，无视一切。注意这个$0,$1,$2等等的语法和zpl不同，$0代表整行读入，$otherint代表的含义是不同的，具体别的整数代表什么网上可以搜到一张表,这里基本上用到$0足够<br><br>awk会按照你的命令一次处理一行。一行处理完后会处理第二行直到处理完整个文件为止<br><br>table代表的是表名，是个一维表。后面的参数“，”代表以逗号为分割符号。<br><br>比如文件sister如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">haha 小猫 羊驼</span><br><span class="line">2 3 猫头鹰 cat</span><br></pre></td></tr></table></figure>
+
+<p>那么执行命令:<br></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">awk <span class="string">'&#123;</span></span><br><span class="line"><span class="string">		len = split($0 , table , ",");</span></span><br><span class="line"><span class="string">&#125;'</span> sister</span><br></pre></td></tr></table></figure>
+
+<p>之后，<br>对于第一行<br><br>len就是3<br><br>table[1] 就是 “haha”<br><br>table[3] 就是羊驼<br><br>第二行以此类推len就是 4了<br><br><br><br>然后执行输出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(table[1]!=<span class="string">"j"</span>)</span><br><span class="line">			<span class="keyword">for</span>(  i = 3 ; i &lt;= len ;i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span> <span class="string">"%s %s\n"</span>,table[1],table[i];</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+
+<p>语句和c很类似。<br><br>第一行if判断是因为，这个文件第一行是表头。表头第一个元素是“j”。<br><br>也就是说这个文件大概长这样：<br></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">j,k,i</span><br><span class="line">1,2,1,5</span><br><span class="line">2,2,4,5,6</span><br><span class="line">3,5,1,7,9,10</span><br><span class="line">4,3,4</span><br></pre></td></tr></table></figure>
+
+<p>我们当然对于第一行，table[1]就是j。我们自然不需要处理第一行。所以利用if来跳过<br><br>然后输出，对于每一行，很容易看见我们的处理方法。输出方式基本就是c语言。<br><br>模板第一个程序中，i从3开始的原因就是第三到最后代表的是与j相关的i。第二列是与j相关的k，我们不需要所以for从3开始<br><br><br><br>这样一来，执行命令就会按照我们想要的样子输出一个可供zpl使用的表<br><br>我们在执行命令的后面重定向一下 “命令 &gt; filename”.这当然是linux命令行的基础操作。把输出导入filename的文件中，供zpl使用即可<br><br><br><br>至此awk简易入门教程结束。<br><br>更多语法日后碰到或者你们不会问我的时候我会在后面命令补充里面添加。<br></p>
+</label>
 
 
+
+
+
+
+
+
+<h2 id="gt-gt-gt-gt-命令补充"><a href="#gt-gt-gt-gt-命令补充" class="headerlink" title="&gt;&gt;&gt;&gt;命令补充"></a>&gt;&gt;&gt;&gt;命令补充</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/24/ProgrammingLanguage/Awk教程/" data-id="cjxzzrjb60005d4v4yo2kmaat" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/24/ProgrammingLanguage/Awk教程/" data-id="cjy8bd7h50000sov4110xueie" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>

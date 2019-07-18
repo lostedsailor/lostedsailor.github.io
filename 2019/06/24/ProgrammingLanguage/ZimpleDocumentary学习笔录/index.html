@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="lostedsailor">
 <meta property="og:description" content="这个东西是用于编写zpl的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-12T11:14:14.679Z">
+<meta property="og:updated_time" content="2019-07-18T06:48:39.070Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZimpleDocumentary学习笔录">
 <meta name="twitter:description" content="这个东西是用于编写zpl的">
@@ -112,7 +112,7 @@
 这个约束中对于一个j有多个i与之对应。<br>
 我们假设文件中的某一行是“3，2，3，4，7，9 ”.<br>
 代表 y[3] >= x[2] + x[3] + x[4] + x[7] + x[9] 这条约束<br>
-那么我们首先要把“3，2，3，4，7，9” 处理为（这个处理方法要用awk，方法详见本博客博文“Awk教程”）：<br>
+那么我们首先要把“3，2，3，4，7，9” 处理为（这个处理方法要用awk，方法详见本博客博文“<a href="https://lostedsailor.github.io/2019/06/24/ProgrammingLanguage/Awk%E6%95%99%E7%A8%8B/#more" target="_blank" rel="noopener">Awk教程</a>”）：<br>
 “<br>
 3,2<br>
 3,3<br>
@@ -148,7 +148,7 @@ problem2.zpl模板中也有很多这样的约束<br>
 那么我们用如下语句描述这条约束：<br>
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">subto 约束name : forall &lt;j&gt; <span class="keyword">in</span> Iy <span class="keyword">do</span> &lt;br&gt; </span><br><span class="line"> 				 sum &lt;i,j&gt; <span class="keyword">in</span> sister : x[i] &lt;= y[j]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">subto 约束name : forall &lt;j&gt; <span class="keyword">in</span> Iy <span class="keyword">do</span> </span><br><span class="line"> 				 sum &lt;i,j&gt; <span class="keyword">in</span> sister : x[i] &lt;= y[j]</span><br></pre></td></tr></table></figure>
 
 <label style="color:green">
 problem2.zpl模板中也有很多这样的约束<br>
@@ -185,7 +185,7 @@ problem2.zpl模板中也有很多这样的约束<br>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/24/ProgrammingLanguage/ZimpleDocumentary学习笔录/" data-id="cjxzzrjb50003d4v45o23xsao" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/24/ProgrammingLanguage/ZimpleDocumentary学习笔录/" data-id="cjy8bd7h90001sov4mqzig7bn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>
