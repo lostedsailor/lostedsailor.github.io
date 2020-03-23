@@ -5,18 +5,20 @@
   
 
   
-  <title>Tag: strategy | lostedsailor</title>
+  <title>ipet | lostedsailor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this is Li Guangming&apos;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lostedsailor">
-<meta property="og:url" content="http://yoursite.com/tags/strategy/index.html">
+  <meta name="description" content="ipet安装部署和使用不定期更新">
+<meta name="keywords" content="ProgrammingLanguage">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ipet">
+<meta property="og:url" content="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/index.html">
 <meta property="og:site_name" content="lostedsailor">
-<meta property="og:description" content="this is Li Guangming&apos;s blog">
+<meta property="og:description" content="ipet安装部署和使用不定期更新">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-03-23T01:03:37.080Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lostedsailor">
-<meta name="twitter:description" content="this is Li Guangming&apos;s blog">
+<meta name="twitter:title" content="ipet">
+<meta name="twitter:description" content="ipet安装部署和使用不定期更新">
   
     <link rel="alternate" href="/atom.xml" title="lostedsailor" type="application/atom+xml">
   
@@ -67,40 +69,83 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/07/12/strategy/优化问题建模方法/" class="archive-article-date">
-  <time datetime="2019-07-12T09:02:37.420Z" itemprop="datePublished">Jul 12</time>
+        <section id="main"><article id="post-ProgrammingLanguage/ipet" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/22/ProgrammingLanguage/ipet/" class="article-date">
+  <time datetime="2020-03-22T03:31:00.000Z" itemprop="datePublished">2020-03-22</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/12/strategy/优化问题建模方法/">规划问题建模方法</a>
+    <h1 class="article-title" itemprop="name">
+      ipet
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ipet安装部署和使用不定期更新"><a href="#ipet安装部署和使用不定期更新" class="headerlink" title="ipet安装部署和使用不定期更新"></a><label style="color:blue">ipet安装部署和使用不定期更新</label></h2><a id="more"></a>
 
+<h2 id="ipet-到底是个什么东西目前我真不球知道"><a href="#ipet-到底是个什么东西目前我真不球知道" class="headerlink" title="ipet 到底是个什么东西目前我真不球知道"></a><label style="color:red">ipet 到底是个什么东西目前我真不球知道</label></h2><h2 id="gt-gt-gt-gt-ipet的安装和部署"><a href="#gt-gt-gt-gt-ipet的安装和部署" class="headerlink" title="&gt;&gt;&gt;&gt;ipet的安装和部署"></a>&gt;&gt;&gt;&gt;ipet的安装和部署</h2><h3 id="gt-gt-gt-准备工作"><a href="#gt-gt-gt-准备工作" class="headerlink" title="&gt;&gt;&gt;准备工作"></a>&gt;&gt;&gt;准备工作</h3><label style="color:purple">
+按照ipet作者写的Readme，显然ipet的运行需要配置virtualenv和pyqt4两个东西。
+</label>
+
+<h4 id="gt-gt-virtualenv的部署"><a href="#gt-gt-virtualenv的部署" class="headerlink" title="&gt;&gt;virtualenv的部署"></a>&gt;&gt;virtualenv的部署</h4><label style="color:purple">
+这东西的部署要求python3.5及之后的版本，所以为了部署它我们通常面临一波python3的版本更新。(更新python3向来是一个繁琐的过程)<br>
+python3版本完成后，只需要执行以下命令即可。
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenv</span><br></pre></td></tr></table></figure>
+
+<h5 id="gt-常见问题"><a href="#gt-常见问题" class="headerlink" title="&gt;常见问题"></a>&gt;常见问题</h5><p><label style="color:red">这里列出部署virtualenv的时候会碰到的一些错误</label></p>
+<p><label style="color:red">1.不能锁定配置文件 /usr/local/etc/gitconfig </label></p>
+<label style="color:green">
+这个要问题花了我很多时间，找了很多方法都没用。<br>
+最后解决的办法是直接把这个usr里的etc目录创建下来，并且在里面执行git init 初始化即可<br>
+我的ubuntu会自带这个目录，服务器没有我估计是某大佬在秀操作吧，别这样，小弟们遭不住啊啊<br> </label>
+
+
+<p><label style="color:red">2.python3的默认版本问题</label></p>
+<label style="color:green">
+环境PATH变量的值直接影响我们快捷使用软件的指令<br>
+当PATH包含的两个目录同时含有一个同名链接的时候，那么输入这个链接名称到底会执行哪一个？<br>
+此次问的我的解决方案是直接删除usr/local/bin目录下的 python3链接，保留usr/bin目录下的python3链接，避免冲突</label>
+
+</label>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/" data-id="ck83rgx8m000058v4nc9pze42" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/09/tempt/YingYuKe/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">YingYuKe</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
