@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="lostedsailor">
 <meta property="og:description" content="ipet安装部署和使用不定期更新">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-03-23T08:49:51.426Z">
+<meta property="og:updated_time" content="2020-03-23T09:19:09.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ipet">
 <meta name="twitter:description" content="ipet安装部署和使用不定期更新">
@@ -101,7 +101,7 @@
 这东西的部署要求python3.5及之后的版本，所以为了部署它我们通常面临一波python3的版本更新。(更新python3向来是一个繁琐的过程)<br>
 python3版本完成后，只需要执行以下命令即可。
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install virtualenv</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install virtualenv virtualenvwrapper</span><br></pre></td></tr></table></figure>
 
 </label>
 
@@ -157,16 +157,18 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 
 </label>
 
+<h4 id="gt-gt-pyqt4的部署"><a href="#gt-gt-pyqt4的部署" class="headerlink" title="&gt;&gt;pyqt4的部署"></a>&gt;&gt;pyqt4的部署</h4><label style="color:purple">
 
+<p>相对于virtualenv的部署，这个就相对容易的多，如下代码走一遍基本上就装好了。<br><br>如果报错，优先考虑安装源更新问题，利用“apt-get update”命令即可<br></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libxext6 libxext-dev libqt4-dev libqt4-gui libqt4-sql</span><br><span class="line">sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer</span><br><span class="line">sudo apt-get install python-qt4</span><br><span class="line">sudo apt-get install python-qt4-*</span><br><span class="line">sudo apt-get install python-qscintilla2</span><br><span class="line"></span><br><span class="line">sudo apt-get install python3-pyqt4</span><br><span class="line">sudo apt-get install python3-pyqt4.qsci</span><br><span class="line">sudo apt-get install python3-pyqt4.qtsql</span><br><span class="line">sudo apt-get install python3-pyqt4.phonon</span><br></pre></td></tr></table></figure>
 
-
-
+</label>
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/" data-id="ck847yiin0001fgv4sdutxla5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/" data-id="ck849dra70009r4v45svazia5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>
