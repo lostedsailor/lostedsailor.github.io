@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="lostedsailor">
 <meta property="og:description" content="ipet安装部署和使用不定期更新">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-03-23T01:03:37.080Z">
+<meta property="og:updated_time" content="2020-03-23T08:49:51.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ipet">
 <meta name="twitter:description" content="ipet安装部署和使用不定期更新">
@@ -101,7 +101,15 @@
 这东西的部署要求python3.5及之后的版本，所以为了部署它我们通常面临一波python3的版本更新。(更新python3向来是一个繁琐的过程)<br>
 python3版本完成后，只需要执行以下命令即可。
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenv</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install virtualenv</span><br></pre></td></tr></table></figure>
+
+</label>
+
+<label style="color:brown;font-size:20px;">
+在攻克下面一系列的问题之后，执行上述命令，并且显示了successfully。 <br>
+在命令“virtualenv --version” 输入并回车之后，成功显示了版本，我哭了。<br>
+当然这仅仅是IPET的开始。<br>
+</label>
 
 <h5 id="gt-常见问题"><a href="#gt-常见问题" class="headerlink" title="&gt;常见问题"></a>&gt;常见问题</h5><p><label style="color:red">这里列出部署virtualenv的时候会碰到的一些错误</label></p>
 <p><label style="color:red">1.不能锁定配置文件 /usr/local/etc/gitconfig </label></p>
@@ -114,10 +122,43 @@ python3版本完成后，只需要执行以下命令即可。
 <p><label style="color:red">2.python3的默认版本问题</label></p>
 <label style="color:green">
 环境PATH变量的值直接影响我们快捷使用软件的指令<br>
-当PATH包含的两个目录同时含有一个同名链接的时候，那么输入这个链接名称到底会执行哪一个？<br>
-此次问的我的解决方案是直接删除usr/local/bin目录下的 python3链接，保留usr/bin目录下的python3链接，避免冲突</label>
+当PATH包含的两个不同目录同时含有一个同名链接的时候，那么输入这个链接名称到底会执行哪一个？<br>
+这个问题对于usr/bin和usr/local/bin而言，系统会优先执行后者<br>
+此次问的我的解决方案是直接变更usr/local/bin目录下的 python3链接即可<br>
+额外科普以下，后面这个bin和前面这个bin作用基本相同，但是前面的bin更加偏向系统或者程序自动加载的环境变量<br>
+因此当用户要进行自己的更改的时候，尽量去更改uer/local/bin下的东西，不要习惯性的往uer/bin目录下添加链接文件<br>
+显然这样一个习惯会加快环境变量全局访问速度<br>
+</label>
+
+<p><label style="color:red">3.pip3版本回退问题</label></p>
+<label style="color:green">
+首先说一下碰到这个问题的原因。<br>
+一开始，由于服务器pyhon3的版本是3.4以下的。virtualenv明确要求python3.5之后的版本,我直接就下载并安装了python3.7以及对应版本的pip3<br>
+然而不论是清华软件源还是国外软件源都没有与3.7相应的virtualenv版本，所以我只能进行一波版本回退<br>
+接下来说回退方案：<br>
+我采用的方案是首先将usr/local/bin中的python3链接文件链接至python3.5<br>
+接着直接删除pip3，而后通过如下代码，来重新安装pip3。通过--version命令确认版本回退成功<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
 
 </label>
+
+
+<p><label style="color:red">4. Cannot uninstall ‘six’………. </label></p>
+<label style="color:green">
+six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
+这个报错是因为six的版本过低，但是自动更新有无法更新。<br>
+网上搜的解决方案基本都是利用pip强制更新six但是都无法成功<br>
+分析原因，应该是我们服务器pip的源不是很好。这个回头肯定有大佬修改。我暂时不轻举妄动。<br>
+我的解决方案:<br>
+直接用pip3的源。执行如下代码即可。<br>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install six --upgrade --ignore-installed six</span><br></pre></td></tr></table></figure>
+
+</label>
+
+
+
 
 
 
@@ -125,7 +166,7 @@ python3版本完成后，只需要执行以下命令即可。
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/" data-id="ck83rrnyr0008s4v42bu48ohd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/" data-id="ck847yiin0001fgv4sdutxla5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>
