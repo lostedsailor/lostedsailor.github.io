@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="lostedsailor">
 <meta property="og:description" content="ipet安装部署和使用不定期更新">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-03-23T09:19:09.548Z">
+<meta property="og:updated_time" content="2020-03-25T09:35:02.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ipet">
 <meta name="twitter:description" content="ipet安装部署和使用不定期更新">
@@ -93,7 +93,7 @@
       
         <h2 id="ipet安装部署和使用不定期更新"><a href="#ipet安装部署和使用不定期更新" class="headerlink" title="ipet安装部署和使用不定期更新"></a><label style="color:blue">ipet安装部署和使用不定期更新</label></h2><a id="more"></a>
 
-<h2 id="ipet-到底是个什么东西目前我真不球知道"><a href="#ipet-到底是个什么东西目前我真不球知道" class="headerlink" title="ipet 到底是个什么东西目前我真不球知道"></a><label style="color:red">ipet 到底是个什么东西目前我真不球知道</label></h2><h2 id="gt-gt-gt-gt-ipet的安装和部署"><a href="#gt-gt-gt-gt-ipet的安装和部署" class="headerlink" title="&gt;&gt;&gt;&gt;ipet的安装和部署"></a>&gt;&gt;&gt;&gt;ipet的安装和部署</h2><h3 id="gt-gt-gt-准备工作"><a href="#gt-gt-gt-准备工作" class="headerlink" title="&gt;&gt;&gt;准备工作"></a>&gt;&gt;&gt;准备工作</h3><label style="color:purple">
+<h2 id="ipet-到底是个什么东西目前我真不球知道"><a href="#ipet-到底是个什么东西目前我真不球知道" class="headerlink" title="ipet 到底是个什么东西目前我真不球知道"></a><label style="color:red"><s>ipet 到底是个什么东西目前我真不球知道</s></label></h2><h2 id="gt-gt-gt-gt-ipet的安装和部署"><a href="#gt-gt-gt-gt-ipet的安装和部署" class="headerlink" title="&gt;&gt;&gt;&gt;ipet的安装和部署"></a>&gt;&gt;&gt;&gt;ipet的安装和部署</h2><h3 id="gt-gt-gt-准备工作"><a href="#gt-gt-gt-准备工作" class="headerlink" title="&gt;&gt;&gt;准备工作"></a>&gt;&gt;&gt;准备工作</h3><label style="color:purple">
 按照ipet作者写的Readme，显然ipet的运行需要配置virtualenv和pyqt4两个东西。
 </label>
 
@@ -164,11 +164,24 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 
 </label>
 
+<h5 id="gt-常见问题-1"><a href="#gt-常见问题-1" class="headerlink" title="&gt;常见问题"></a>&gt;常见问题</h5><p><label style="color:brown;font-size:15px;">相对于virtuallenv的问题，pyqt4的问题看似简单许多。但是会有很多奇葩问题并且也不容易解决。比如ipet存在内置调用是从python3的pyqt4导入QtCore，然而python2很容易安装了pyqt4以及相关的包，但python3却死活没法成功安装。python2和3的兼容问题饱受诟病，几乎所有用户都要同时具备python2和3。 </label></p>
+<p><label style="color:red">1.cannot import name “QtCore”</label></p>
+<label style="color:green">
+    成功配置好PyQt4之后，无论是进入python2还是3，通过import PyQt4 可以验证PyQt4已经部署成功。<br>
+    但是python2的PyQt4里面包含所需要的QtCore等，但是python3里面包含的PyQt4确不具备所需要的模块。<br>
+    网上也没有一个很好的解决方案，看来可行的解决方案是直接下载PyQt4的野包进行安装，而不用官网的<br>
+    对于这个问题的，我的解决方案是：<br>
+    束手无策之际，我回头看IPET的readme，没想到作者应该是意识到了这个问题，直接就提供了python3的PyQt4的安装脚本（install-pyqt4-in-virtual-environment.sh）。<br>
+    这个脚本是直接在python的虚拟环境“venv”中安装PyQt4!。我说为什么要人上去费事配置virtualenv。（具体操作会在后面ipet使用详细说明）<br>
+    那么研究至此，准备工作应该告一段落。
+</label>
 
+
+<h2 id="gt-gt-gt-gt-ipet的使用"><a href="#gt-gt-gt-gt-ipet的使用" class="headerlink" title="&gt;&gt;&gt;&gt;ipet的使用"></a>&gt;&gt;&gt;&gt;ipet的使用</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/" data-id="ck849dra70009r4v45svazia5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/" data-id="ck875ift70000pov4iex630od" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>
