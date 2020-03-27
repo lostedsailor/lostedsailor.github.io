@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="lostedsailor">
 <meta property="og:description" content="ipet安装部署和使用">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-03-25T10:08:13.520Z">
+<meta property="og:updated_time" content="2020-03-27T05:22:10.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ipet">
 <meta name="twitter:description" content="ipet安装部署和使用">
@@ -182,12 +182,82 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 </label>
 
 
-<h2 id="gt-gt-gt-gt-ipet的使用"><a href="#gt-gt-gt-gt-ipet的使用" class="headerlink" title="&gt;&gt;&gt;&gt;ipet的使用"></a>&gt;&gt;&gt;&gt;ipet的使用</h2><p>safasfsa</p>
+<h2 id="gt-gt-gt-gt-ipet的使用"><a href="#gt-gt-gt-gt-ipet的使用" class="headerlink" title="&gt;&gt;&gt;&gt;ipet的使用"></a>&gt;&gt;&gt;&gt;ipet的使用</h2><h3 id="gt-gt-gt-概述"><a href="#gt-gt-gt-概述" class="headerlink" title="&gt;&gt;&gt;概述"></a>&gt;&gt;&gt;概述</h3><label style="color:red;font-size:15px;">
+首次创建虚拟环境时候的配置性操作由棕色字体给出，也就是说，第二次使用的时候无需进行配置。<br><br>
+</label>
 
+
+<label style="color:purple">
+==>>ipet是由python完成的程序，因此ipet的运行需要对应的python环境，这也是部署virtualenv的原因。<br>
+执行如下代码创建名为venv的虚拟环境并且进入venv环境模式：<br>
+</label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ipet</span><br><span class="line">virtualenv --python python3 venv</span><br><span class="line"><span class="built_in">source</span> venv/bin/activate</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<label style="color:purple">
+==>>可以利用以下代码退出python虚拟环境模式：
+</label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<label style="color:brown">
+==>>首次创建新的虚拟环境的时候，需要部署ipet要求的pyqt4，执行以下代码即可：
+</label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./install-pyqt4-in-virtual-environment.sh</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<label style="color:brown">
+==>>执行以下代码，来完成需要的部署<br>
+（注意，在这期间可能会出现找不到安装包，版本错误之类的fatal错误信息。<br>
+这时候可采取单独安装相应的包的方案，或者指定给pip好用的下载源，或者其他的方案，<br>
+总之这里的问题一般是一些python配置的时候会出现的常见的问题）<br>
+</label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install .</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<label style="color:brown">
+==>>作者的README里说，对于以上命令，如果你是开发者，利用下面的命令替代可能会更好<br>
+好在哪里目前不清楚，以后开发的时候可能会用到，这里也贴下来<br>
+</label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -e .</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<label style="color:brown">
+==>>通过以下代码来测试ipet是否部署成功：<br>
+(这里相当于执行以下c++的make test，目前我已经部署成功，返回“OK”则表明测试通过，部署成功)<br>
+</label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m unittest <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<label style="color:red;font-size:15px;">
+讨论至此，IPET的部署已经告一段落，接下来便是应用到相应的程序上。<br>
+</label>
+
+<h3 id="gt-gt-gt-具体应用到程序上"><a href="#gt-gt-gt-具体应用到程序上" class="headerlink" title="&gt;&gt;&gt;具体应用到程序上"></a>&gt;&gt;&gt;具体应用到程序上</h3><label style="color:red;font-size:15px;">
+执行以下代码，来开启ipet使用的探索之旅：<br>
+</label>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install sphinx</span><br><span class="line"><span class="built_in">cd</span> doc</span><br><span class="line">make html</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="gt-gt-gt-gt-往后待续"><a href="#gt-gt-gt-gt-往后待续" class="headerlink" title="&gt;&gt;&gt;&gt;往后待续"></a>&gt;&gt;&gt;&gt;往后待续</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/" data-id="ck875xaay000krwv4via8pl1e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/22/ProgrammingLanguage/ipet/" data-id="ck8762nag00087kv4k4hc3s8x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>
