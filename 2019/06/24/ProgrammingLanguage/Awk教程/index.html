@@ -1,97 +1,224 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="" data-default-color-scheme=&#34;auto&#34;>
+
+
+
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="Awk学习不定期更新">
+  <meta name="author" content="Li Guangming">
+  <meta name="keywords" content>
+  
+  <title>Awk教程 - lostedsailor</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
+  <link rel="stylesheet" href="/lib/hint/hint.min.css">
+
+  
+    
+    
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css">
+    
   
 
   
-  <title>Awk教程 | lostedsailor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Awk学习不定期更新">
-<meta name="keywords" content="ProgrammingLanguage">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Awk教程">
-<meta property="og:url" content="http://yoursite.com/2019/06/24/ProgrammingLanguage/Awk教程/index.html">
-<meta property="og:site_name" content="lostedsailor">
-<meta property="og:description" content="Awk学习不定期更新">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-18T06:55:14.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Awk教程">
-<meta name="twitter:description" content="Awk学习不定期更新">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
-    <link rel="alternate" href="/atom.xml" title="lostedsailor" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/color-schema.js"></script>
 </head>
-</html>
+
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">lostedsailor</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">long long ago , there&#39;s a sailor</a>
-        </h2>
-      
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Startseite
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archiv
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Kategorie
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Etiketten
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                Über mich
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Awk教程">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-06-24 13:23" pubdate>
+        June 24, 2019 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      18
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
       </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-ProgrammingLanguage/Awk教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/24/ProgrammingLanguage/Awk教程/" class="article-date">
-  <time datetime="2019-06-24T05:23:00.000Z" itemprop="datePublished">2019-06-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Awk教程
-    </h1>
-  
+  </header>
 
-      </header>
+  <main>
     
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Awk学习不定期更新"><a href="#Awk学习不定期更新" class="headerlink" title="Awk学习不定期更新"></a><label style="color:blue">Awk学习不定期更新</label></h2><a id="more"></a>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Awk教程</h1>
+            
+            <div class="markdown-body">
+              <h2 id="Awk学习不定期更新"><a href="#Awk学习不定期更新" class="headerlink" title="Awk学习不定期更新"></a><label style="color:blue">Awk学习不定期更新</label></h2><a id="more"></a>
 <h2 id="AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！"><a href="#AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！" class="headerlink" title="AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！"></a><label style="color:red">AWK是一个优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。与grep和sed并称linux三剑客。同样的这里不进行系统学习，或者说进行一些非常基础的入门学习。系统学习在网上有很多很不错的学习网站。但是作为入门，从这里开始再合适不过了！</label></h2><h2 id="gt-gt-gt-gt-入门教程"><a href="#gt-gt-gt-gt-入门教程" class="headerlink" title="&gt;&gt;&gt;&gt;入门教程"></a>&gt;&gt;&gt;&gt;入门教程</h2><label style="color:purple">
 首先，和zimple一样，请开一个新的页面打开我的<a href="https://lostedsailor.github.io/2019/06/26/muban/Awk%E6%A8%A1%E6%9D%BF/#more" target="_blank" rel="noopener">awk模板</a>，我们对照模板开始讲解。<br>
 awk是命令语言，也就是说在bash（命令行）界面，基本上可以完成awk的所有操作。<br>
@@ -102,13 +229,13 @@ awk是命令语言，也就是说在bash（命令行）界面，基本上可以�
 <h3 id="gt-gt-gt-awk的任务"><a href="#gt-gt-gt-awk的任务" class="headerlink" title="&gt;&gt;&gt;awk的任务"></a>&gt;&gt;&gt;awk的任务</h3><label style="color:blue">
 在我们的zpl教程中，或者说zpl模板中，经常出现以下模式的语句：<br>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> z_all := &#123;<span class="built_in">read</span> <span class="string">"Zall"</span> as <span class="string">"&lt;1n,2n,3n,4n&gt;"</span>&#125;;</span><br><span class="line"></span><br><span class="line">subto Z_all_1:</span><br><span class="line">	sum &lt;k,0,m,n&gt; <span class="keyword">in</span> z_all:z[k]*m &gt;= yipusen_1;</span><br><span class="line"></span><br><span class="line">subto Z_all_2:</span><br><span class="line">	sum &lt;k,1,m,n&gt; <span class="keyword">in</span> z_all:z[k]*m &gt;= yipusen_2;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> z_all := &#123;<span class="hljs-built_in">read</span> <span class="hljs-string">"Zall"</span> as <span class="hljs-string">"&lt;1n,2n,3n,4n&gt;"</span>&#125;;<br><br>subto Z_all_1:<br>	sum &lt;k,0,m,n&gt; <span class="hljs-keyword">in</span> z_all:z[k]*m &gt;= yipusen_1;<br><br>subto Z_all_2:<br>	sum &lt;k,1,m,n&gt; <span class="hljs-keyword">in</span> z_all:z[k]*m &gt;= yipusen_2;<br></code></pre></td></tr></table></figure>
 
 <p>这些语句的作用相信看过zpl教程的人都一定很明确。 <br><br>简单说一下就是Zall是一个四列的表。我们利用了文件读入的方式来定义 z_all 集合  <br><br>z_all集合的元素就是相当于一个个四维的向量或者叫元组 <br><br>然后利用z_all集合来定义几个约束 <br><br><br><br>那么明显，我们awk的使命就是做出Zall这个文件来让awk来读。因为模型给我们的文件往往不是很标准的四列的数据。<br><br>同时请注意，模型有时候会出现列数不确定的情况。比如第一列代表x的下标i。后面代表和x[i]相关的的y的下标j。不同的i对应的j的数量不确定<br><br>这种算一种典型的情况，在zpl教程中我们提到过。<br><br>比如模型如下：<br></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 6</span><br><span class="line">2 4 6 7 8 9</span><br><span class="line">3 2 5</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">1 2 3 4 6<br>2 4 6 7 8 9<br>3 2 5<br></code></pre></td></tr></table></figure>
 
 <p>代表的是，x[1] 分别和 y[2],y[3],y[4],y[6]相关<br><br>x[2] 分别和 y[4],y[6],y[7],y[8],y[9]相关<br><br>x[3] 分别和 y[2],y[5]相关<br><br><br><br>那么我们需要用awk把上面的模型处理成如下形式:<br></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1 2</span><br><span class="line">1 3</span><br><span class="line">1 4</span><br><span class="line">1 6</span><br><span class="line">2 4</span><br><span class="line">2 6 </span><br><span class="line">2 7 </span><br><span class="line">2 8</span><br><span class="line">2 9</span><br><span class="line">3 2</span><br><span class="line">3 5</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">1 2<br>1 3<br>1 4<br>1 6<br>2 4<br>2 6 <br>2 7 <br>2 8<br>2 9<br>3 2<br>3 5<br></code></pre></td></tr></table></figure>
 
 <p>如此以来<br><br>我们就可以用forall语句或者sum语句来表达出任何形状的约束或者目标函数的表达式<br><br>这个例子说明了awk的使命，此外模型型除了上面的情况，往往第一行不是数据而是表头，让人们容易知道每一列是什么。<br><br>zpl读入则不需要这些表头，可以用zpl内置的语句忽略这一行。但是我们为了简便，往往利用awk把这行处理掉。<br><br></p></label><p></p>
 <h3 id="gt-gt-gt-awk的语法"><a href="#gt-gt-gt-awk的语法" class="headerlink" title="&gt;&gt;&gt;awk的语法"></a>&gt;&gt;&gt;awk的语法</h3><label style="color:blue">
@@ -118,19 +245,19 @@ awk是命令语言，也就是说在bash（命令行）界面，基本上可以�
 然后为了建模我们学习一个split函数足矣<br>
 我们看模板第一个awk命令。split的语法格式是：<br>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">len = split(<span class="variable">$0</span> , table , <span class="string">","</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">len = split(<span class="hljs-variable">$0</span> , table , <span class="hljs-string">","</span>);<br></code></pre></td></tr></table></figure>
 
 <p>按顺序介绍参数的含义：返回值len（你可以起成任何名字）代表读取的元素数。遍历的时候会用。<br><br>$0,代表的是整行读入，无视一切。注意这个$0,$1,$2等等的语法和zpl不同，$0代表整行读入，$otherint代表的含义是不同的，具体别的整数代表什么网上可以搜到一张表,这里基本上用到$0足够<br><br>注意！！！awk会按照你的命令一次处理一行。一行处理完后会处理第二行直到处理完整个文件为止<br><br>table代表的是表名，是个一维表。后面的参数“，”代表以逗号为分割符号。<br><br>比如文件sister如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">haha 小猫 羊驼</span><br><span class="line">2 3 猫头鹰 cat</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">haha 小猫 羊驼<br>2 3 猫头鹰 cat<br></code></pre></td></tr></table></figure>
 
 <p>那么执行命令:<br></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">awk <span class="string">'&#123;</span></span><br><span class="line"><span class="string">		len = split($0 , table , ",");</span></span><br><span class="line"><span class="string">&#125;'</span> sister</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">awk <span class="hljs-string">'&#123;<br>		len = split($0 , table , ",");<br>&#125;'</span> sister<br></code></pre></td></tr></table></figure>
 
 <p>之后，<br>对于第一行<br><br>len就是3<br><br>table[1] 就是 “haha”<br><br>table[3] 就是羊驼<br><br>第二行以此类推len就是 4了<br><br><br><br>然后执行输出。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(table[1]!=<span class="string">"j"</span>)</span><br><span class="line">			<span class="keyword">for</span>(  i = 3 ; i &lt;= len ;i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span> <span class="string">"%s %s\n"</span>,table[1],table[i];</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">if</span>(table[1]!=<span class="hljs-string">"j"</span>)<br>			<span class="hljs-keyword">for</span>(  i = 3 ; i &lt;= len ;i++)<br>			&#123;<br>				<span class="hljs-built_in">printf</span> <span class="hljs-string">"%s %s\n"</span>,table[1],table[i];<br>			&#125;<br></code></pre></td></tr></table></figure>
 
 <p>语句和c很类似。<br><br>第一行if判断是因为，这个文件第一行是表头。表头第一个元素是“j”。<br><br>也就是说这个文件大概长这样：<br></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">j,k,i</span><br><span class="line">1,2,1,5</span><br><span class="line">2,2,4,5,6</span><br><span class="line">3,5,1,7,9,10</span><br><span class="line">4,3,4</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">j,k,i<br>1,2,1,5<br>2,2,4,5,6<br>3,5,1,7,9,10<br>4,3,4<br></code></pre></td></tr></table></figure>
 
 <p>我们当然对于第一行，table[1]就是j。我们自然不需要处理第一行。所以利用if来跳过<br><br>然后输出，对于每一行，很容易看见我们的处理方法。输出方式基本就是c语言。<br><br>模板第一个程序中，i从3开始的原因就是第三到最后代表的是与j相关的i。第二列是与j相关的k，我们不需要所以for从3开始<br><br><br><br>这样一来，执行命令就会按照我们想要的样子输出一个可供zpl使用的表<br><br>我们在执行命令的后面重定向一下 “命令 &gt; filename”.这当然是linux命令行的基础操作。把输出导入filename的文件中，供zpl使用即可<br><br><br><br>至此awk简易入门教程结束。<br><br>更多语法日后碰到或者你们不会问我的时候我会在后面命令补充里面添加。<br></p>
 </label>
@@ -143,140 +270,236 @@ awk是命令语言，也就是说在bash（命令行）界面，基本上可以�
 
 
 <h2 id="gt-gt-gt-gt-命令补充"><a href="#gt-gt-gt-gt-命令补充" class="headerlink" title="&gt;&gt;&gt;&gt;命令补充"></a>&gt;&gt;&gt;&gt;命令补充</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/24/ProgrammingLanguage/Awk教程/" data-id="cktmdlwey00038ovla94qj7k0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li></ul>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/06/24/ProgrammingLanguage/ZimpleDocumentary学习笔录/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ZimpleDocumentary学习笔录</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/06/19/SystemLearning/Linux教程(1)/">
+                        <span class="hidden-mobile">Linux教程(1)</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
 
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/06/24/ProgrammingLanguage/ZimpleDocumentary学习笔录/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          ZimpleDocumentary学习笔录
-        
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'lostedsailor/comment-uttterance');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
       </div>
-    </a>
-  
-  
-    <a href="/2019/06/19/SystemLearning/Linux教程(1)/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Linux教程(1)</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDElearning/">IDElearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ProgrammingLanguage/">ProgrammingLanguage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SystemLearning/">SystemLearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aboutme/">aboutme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/muban/">muban</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patoh/">patoh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/strategy/">strategy</a></li></ul>
     </div>
-  </div>
-
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/IDElearning/" style="font-size: 15px;">IDElearning</a> <a href="/tags/ProgrammingLanguage/" style="font-size: 20px;">ProgrammingLanguage</a> <a href="/tags/SystemLearning/" style="font-size: 10px;">SystemLearning</a> <a href="/tags/aboutme/" style="font-size: 10px;">aboutme</a> <a href="/tags/muban/" style="font-size: 15px;">muban</a> <a href="/tags/patoh/" style="font-size: 10px;">patoh</a> <a href="/tags/strategy/" style="font-size: 10px;">strategy</a>
-    </div>
-  </div>
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/09/15/patoh/patoh/">patoh</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/22/ProgrammingLanguage/ipet/">ipet</a>
-          </li>
-        
-          <li>
-            <a href="/2020/01/14/ProgrammingLanguage/python教程/">python语言教程</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/12/strategy/优化问题建模方法/">规划问题建模方法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/12/ProgrammingLanguage/c语言教程/">c语言教程</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2021 Li Guangming<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
   </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
 </footer>
-    </div>
-    <nav id="mobile-nav">
+
+
+  <!-- SCRIPTS -->
   
-    <a href="/" class="mobile-nav-link">Home</a>
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<script src="/js/events.js"></script>
+<script src="/js/plugins.js"></script>
+
+<!-- Plugins -->
+
+
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    <script src="/js/img-lazyload.js"></script>
   
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
 
 
-  </div>
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js"></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script src="/js/boot.js"></script>
+
+
 </body>
 </html>
