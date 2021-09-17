@@ -151,7 +151,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      38 字
+      358 字
     </span>
   
 
@@ -161,7 +161,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      4
        分钟
     </span>
   
@@ -206,7 +206,29 @@
 
 <!-- ## <label style="color:red">自己用的模板</labels> -->
 
-<h3 id="大白话说一下什么是超图划分："><a href="#大白话说一下什么是超图划分：" class="headerlink" title="大白话说一下什么是超图划分："></a>大白话说一下什么是超图划分：</h3><h4 id="d"><a href="#d" class="headerlink" title="d"></a>d</h4><h3 id="gt-gt-gt-下载"><a href="#gt-gt-gt-下载" class="headerlink" title="&gt;&gt;&gt; 下载"></a>&gt;&gt;&gt; 下载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://www.cc.gatech.edu/~umit/PaToH/patoh-Linux-x86_64.tar.gz<br></code></pre></td></tr></table></figure>
+<h3 id="超图划分问题介绍（大白话）："><a href="#超图划分问题介绍（大白话）：" class="headerlink" title="超图划分问题介绍（大白话）："></a>超图划分问题介绍（大白话）：</h3><h4 id="1-什么是超图："><a href="#1-什么是超图：" class="headerlink" title="1.什么是超图："></a>1.什么是超图：</h4><label>
+   H=(V,N)是一个超图，V是图的顶点集，N是net集，net是V的子集。 <br>
+</label>
+<label style="color:skyblue;">
+   可能的疑问：一个net跟一个团有什么区别？ <br>
+   _答：举个例子，三个net:{a,b,c},{b,c,d},{c,d,a}. 这是三个net，一个团.而不是三个团，用团表示的话会“缺失信息”.<br>
+   net和普通的图中的边（edge）对应，有的人叫超边。 <br>
+</label>
+
+<h4 id="2-超图划分："><a href="#2-超图划分：" class="headerlink" title="2.超图划分："></a>2.超图划分：</h4><label>
+   H=(V,N)是一个超图.把V划分为k个不交的点集D={W1,W2,...,Wk},就是H一个划分(跟普通图划分定义相同).<br>
+</label>
+
+<h4 id="3-问题介绍："><a href="#3-问题介绍：" class="headerlink" title="3.问题介绍："></a>3.问题介绍：</h4><label>
+   H=(V,N)是一个超图，D={W1,W2,...,Wk}是H一个划分.对于这个划分，找一个net集N，
+   使得D被覆盖(被覆盖指的是对每个Wi，其中至少有一个点包含在某个N中的某个net里),
+   且费用最小（每个net会给定一个费用，N的费用就是N包含的net的费用的和）.
+   那么这个最小费用就是就是这个划分D的费用.<br>
+   目标：找到费用最小且满足平衡性条件的划分.<br>
+   (满足平衡性条件：每个点也有个权值，对于一个划分，各个部分的点权和相差不能太多)<br>
+</label>
+
+<h3 id="gt-gt-gt-下载"><a href="#gt-gt-gt-下载" class="headerlink" title="&gt;&gt;&gt; 下载"></a>&gt;&gt;&gt; 下载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://www.cc.gatech.edu/~umit/PaToH/patoh-Linux-x86_64.tar.gz<br></code></pre></td></tr></table></figure>
 
 <h3 id="gt-gt-gt"><a href="#gt-gt-gt" class="headerlink" title="&gt;&gt;&gt;"></a>&gt;&gt;&gt;</h3><script src="https://utteranc.es/client.js" repo="lostedsailor/comment-utterance" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>
 </script>
@@ -249,7 +271,7 @@
                     
                       <a href="/2020/03/22/ProgrammingLanguage/ipet/">
                         <span class="hidden-mobile">ipet</span>
-                        <span class="visible-mobile">Nächster</span>
+                        <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -326,7 +348,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -334,7 +356,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+          <label data-error="x" data-success="v" for="local-search-input">keyword</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
