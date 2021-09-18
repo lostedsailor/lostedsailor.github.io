@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="" data-default-color-scheme=&#34;auto&#34;>
+<html lang="" data-default-color-scheme=&#34;light&#34;>
 
 
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content=" ipet安装部署和使用">
   <meta name="author" content="Li Guangming">
   <meta name="keywords" content>
@@ -51,7 +51,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"___","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#F0FFFF","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -217,7 +217,7 @@ ipet应该会根据代码直接生成文档，并且以html的形式存起来，
 这东西的部署要求python3.5及之后的版本，所以为了部署它我们通常面临一波python3的版本更新。(更新python3向来是一个繁琐的过程)<br>
 python3版本完成后，只需要执行以下命令即可。
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pip3 install virtualenv virtualenvwrapper<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo pip3 install virtualenv virtualenvwrapper<br></code></pre></div></td></tr></table></figure>
 
 </label>
 
@@ -255,7 +255,7 @@ python3版本完成后，只需要执行以下命令即可。
 我采用的方案是首先将usr/local/bin中的python3链接文件链接至python3.5<br>
 接着直接删除pip3，而后通过如下代码，来重新安装pip3。通过--version命令确认版本回退成功<br>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install python3-pip<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt install python3-pip<br></code></pre></div></td></tr></table></figure>
 
 </label>
 
@@ -269,14 +269,14 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 我的解决方案:<br>
 直接用pip3的源。执行如下代码即可。<br>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo pip3 install six --upgrade --ignore-installed six<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo pip3 install six --upgrade --ignore-installed six<br></code></pre></div></td></tr></table></figure>
 
 </label>
 
 <h4 id="gt-gt-pyqt4的部署"><a href="#gt-gt-pyqt4的部署" class="headerlink" title="&gt;&gt;pyqt4的部署"></a>&gt;&gt;pyqt4的部署</h4><label style="color:purple">
 
 <p>相对于virtualenv的部署，这个就相对容易的多，如下代码走一遍基本上就装好了。<br><br>如果报错，优先考虑安装源更新问题，利用“apt-get update”命令即可<br></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install libxext6 libxext-dev libqt4-dev libqt4-gui libqt4-sql<br>sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer<br>sudo apt-get install python-qt4<br>sudo apt-get install python-qt4-*<br>sudo apt-get install python-qscintilla2<br><br>sudo apt-get install python3-pyqt4<br>sudo apt-get install python3-pyqt4.qsci<br>sudo apt-get install python3-pyqt4.qtsql<br>sudo apt-get install python3-pyqt4.phonon<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt-get install libxext6 libxext-dev libqt4-dev libqt4-gui libqt4-sql<br>sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer<br>sudo apt-get install python-qt4<br>sudo apt-get install python-qt4-*<br>sudo apt-get install python-qscintilla2<br><br>sudo apt-get install python3-pyqt4<br>sudo apt-get install python3-pyqt4.qsci<br>sudo apt-get install python3-pyqt4.qtsql<br>sudo apt-get install python3-pyqt4.phonon<br></code></pre></div></td></tr></table></figure>
 
 </label>
 
@@ -303,7 +303,7 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 执行如下代码创建名为venv的虚拟环境并且进入venv环境模式：<br>
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ipet<br>virtualenv --python python3 venv<br><span class="hljs-built_in">source</span> venv/bin/activate<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ipet<br>virtualenv --python python3 venv<br><span class="hljs-built_in">source</span> venv/bin/activate<br></code></pre></div></td></tr></table></figure>
 
 <br>
 
@@ -311,7 +311,7 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 ==>>可以利用以下代码退出python虚拟环境模式：
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">deactivate<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">deactivate<br></code></pre></div></td></tr></table></figure>
 
 <br>
 
@@ -319,7 +319,7 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 ==>>首次创建新的虚拟环境的时候，需要部署ipet要求的pyqt4，执行以下代码即可：
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./install-pyqt4-in-virtual-environment.sh<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">./install-pyqt4-in-virtual-environment.sh<br></code></pre></div></td></tr></table></figure>
 
 <br>
 
@@ -330,7 +330,7 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 总之这里的问题一般是一些python配置的时候会出现的常见的问题）<br>
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install .<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">pip install .<br></code></pre></div></td></tr></table></figure>
 
 <br>
 
@@ -339,7 +339,7 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 好在哪里目前不清楚，以后开发的时候可能会用到，这里也贴下来<br>
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install -e .<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">pip install -e .<br></code></pre></div></td></tr></table></figure>
 
 <br>
 
@@ -348,7 +348,7 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 (这里相当于执行以下c++的make test，目前我已经部署成功，返回“OK”则表明测试通过，部署成功)<br>
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python -m unittest <span class="hljs-built_in">test</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">python -m unittest <span class="hljs-built_in">test</span><br></code></pre></div></td></tr></table></figure>
 
 <br>
 
@@ -360,7 +360,7 @@ six是python的一个模块，查一下six的资料颇有几分历史趣味<br>
 执行以下代码，来开启ipet使用的探索之旅：<br>
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install sphinx<br><span class="hljs-built_in">cd</span> doc<br>make html<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">pip install sphinx<br><span class="hljs-built_in">cd</span> doc<br>make html<br></code></pre></div></td></tr></table></figure>
 
 <br>
 

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="" data-default-color-scheme=&#34;auto&#34;>
+<html lang="" data-default-color-scheme=&#34;light&#34;>
 
 
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="Linux命令学习不定期更新">
   <meta name="author" content="Li Guangming">
   <meta name="keywords" content>
@@ -51,7 +51,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"___","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#F0FFFF","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -204,9 +204,9 @@
             <div class="markdown-body">
               <h2 id="Linux命令学习不定期更新"><a href="#Linux命令学习不定期更新" class="headerlink" title="Linux命令学习不定期更新"></a><label style="color:blue">Linux命令学习不定期更新</label></h2><a id="more"></a>
 
-<h2 id="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头"><a href="#这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地"><a href="#gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地" class="headerlink" title="&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地"></a>&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">使用<span class="hljs-string">"scp"</span>命令.<br><span class="hljs-string">"（注意，：/开头的是从根目录找的，要是想放到个人目录下，直接去掉第一个斜杠XXX/XXX/XXX这样即可，或者~/XXX/XXX也可以）"</span><br><span class="hljs-string">"scp /home/work/source.txt work@192.168.0.10:/home/work/"</span>   <br><span class="hljs-comment">#把本地的source.txt文件拷贝到192.168.0.10机器上的/home/work目录下。</span><br><span class="hljs-string">"scp work@192.168.0.10:/home/work/source.txt /home/work/"</span>   <br><span class="hljs-comment">#把192.168.0.10机器上的source.txt文件拷贝到本地的/home/work目录下</span><br><span class="hljs-string">"scp work@192.168.0.10:/home/work/source.txt work@192.168.0.11:/home/work/"</span>   <br><span class="hljs-comment">#把192.168.0.10机器上的source.txt文件拷贝到192.168.0.11机器的/home/work目录下</span><br><span class="hljs-string">"scp -r /home/work/sourcedir work@192.168.0.10:/home/work/"</span>   <br><span class="hljs-comment">#拷贝文件夹，加-r参数.其他的都同上</span><br></code></pre></td></tr></table></figure>
+<h2 id="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头"><a href="#这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地"><a href="#gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地" class="headerlink" title="&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地"></a>&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">使用<span class="hljs-string">"scp"</span>命令.<br><span class="hljs-string">"（注意，：/开头的是从根目录找的，要是想放到个人目录下，直接去掉第一个斜杠XXX/XXX/XXX这样即可，或者~/XXX/XXX也可以）"</span><br><span class="hljs-string">"scp /home/work/source.txt work@192.168.0.10:/home/work/"</span>   <br><span class="hljs-comment">#把本地的source.txt文件拷贝到192.168.0.10机器上的/home/work目录下。</span><br><span class="hljs-string">"scp work@192.168.0.10:/home/work/source.txt /home/work/"</span>   <br><span class="hljs-comment">#把192.168.0.10机器上的source.txt文件拷贝到本地的/home/work目录下</span><br><span class="hljs-string">"scp work@192.168.0.10:/home/work/source.txt work@192.168.0.11:/home/work/"</span>   <br><span class="hljs-comment">#把192.168.0.10机器上的source.txt文件拷贝到192.168.0.11机器的/home/work目录下</span><br><span class="hljs-string">"scp -r /home/work/sourcedir work@192.168.0.10:/home/work/"</span>   <br><span class="hljs-comment">#拷贝文件夹，加-r参数.其他的都同上</span><br></code></pre></div></td></tr></table></figure>
 
-<h3 id="gt-gt-gt-分配一个文件所有权限"><a href="#gt-gt-gt-分配一个文件所有权限" class="headerlink" title="&gt;&gt;&gt;分配一个文件所有权限"></a>&gt;&gt;&gt;分配一个文件所有权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">使用<span class="hljs-string">"chmod 777 filename"</span>可分配这个文件所有组件所有权限（读，写，执行）<br>其他权限用的时候再看编号即可<br>  ------------------<br>  777代表的分别是用户群组和其他人的权限<br>  也就是说700则是代表用户有所有权限，另外两个没有权限<br>  ------------------<br>  7代表的是二进制中的111等于7，按顺序分别是rwx<br>  所以比如我们说只给读和执行不给写的权限，就是二进制的101，也就是十进制的(1+4=5)<br>  也就是说<span class="hljs-string">"chmod 555 filename"</span>代表的是给所有人读和执行，但是不给写的权限<br></code></pre></td></tr></table></figure>
+<h3 id="gt-gt-gt-分配一个文件所有权限"><a href="#gt-gt-gt-分配一个文件所有权限" class="headerlink" title="&gt;&gt;&gt;分配一个文件所有权限"></a>&gt;&gt;&gt;分配一个文件所有权限</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">使用<span class="hljs-string">"chmod 777 filename"</span>可分配这个文件所有组件所有权限（读，写，执行）<br>其他权限用的时候再看编号即可<br>  ------------------<br>  777代表的分别是用户群组和其他人的权限<br>  也就是说700则是代表用户有所有权限，另外两个没有权限<br>  ------------------<br>  7代表的是二进制中的111等于7，按顺序分别是rwx<br>  所以比如我们说只给读和执行不给写的权限，就是二进制的101，也就是十进制的(1+4=5)<br>  也就是说<span class="hljs-string">"chmod 555 filename"</span>代表的是给所有人读和执行，但是不给写的权限<br></code></pre></div></td></tr></table></figure>
 
 <label style="color:white">
    我个人常用的给所有权限是“chmod 700 filename”
@@ -279,8 +279,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2019/06/18/IDElearning/GitHub教程/">
-                        <span class="hidden-mobile">GitHub教程</span>
+                      <a href="/2019/06/18/IDElearning/Vim教程/">
+                        <span class="hidden-mobile">Vim教程</span>
                         <span class="visible-mobile">Nächster</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

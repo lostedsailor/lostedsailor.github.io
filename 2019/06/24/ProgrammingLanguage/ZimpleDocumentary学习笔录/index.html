@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="" data-default-color-scheme=&#34;auto&#34;>
+<html lang="" data-default-color-scheme=&#34;light&#34;>
 
 
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="这个东西是用于编写zpl的">
   <meta name="author" content="Li Guangming">
   <meta name="keywords" content>
@@ -51,7 +51,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"___","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#F0FFFF","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -235,7 +235,7 @@
 假设集合名字叫 sister。那么我们通过如下语句描述这条约束<br>
 </3,9></3,7></3,4></3,3></3,2></label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">subto 约束name : sum &lt;i,j&gt; <span class="hljs-keyword">in</span> sister : x[i] &lt;= y[j]<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">subto 约束name : sum &lt;i,j&gt; <span class="hljs-keyword">in</span> sister : x[i] &lt;= y[j]<br></code></pre></div></td></tr></table></figure>
 
 <label style="color:green">
 problem2.zpl模板中也有很多这样的约束<br>
@@ -259,7 +259,7 @@ problem2.zpl模板中也有很多这样的约束<br>
 那么我们用如下语句描述这条约束：<br>
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">subto 约束name : forall &lt;j&gt; <span class="hljs-keyword">in</span> Iy <span class="hljs-keyword">do</span> <br> 				 sum &lt;i,j&gt; <span class="hljs-keyword">in</span> sister : x[i] &lt;= y[j]<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">subto 约束name : forall &lt;j&gt; <span class="hljs-keyword">in</span> Iy <span class="hljs-keyword">do</span> <br> 				 sum &lt;i,j&gt; <span class="hljs-keyword">in</span> sister : x[i] &lt;= y[j]<br></code></pre></div></td></tr></table></figure>
 
 <label style="color:green">
 problem2.zpl模板中也有很多这样的约束<br>
@@ -267,25 +267,25 @@ problem2.zpl模板中也有很多这样的约束<br>
 </label>
 
 
-<h3 id="gt-gt-gt-zpl文件语法"><a href="#gt-gt-gt-zpl文件语法" class="headerlink" title="&gt;&gt;&gt; zpl文件语法"></a>&gt;&gt;&gt; zpl文件语法</h3><h4 id="gt-gt-设置常数"><a href="#gt-gt-设置常数" class="headerlink" title="&gt;&gt;设置常数"></a>&gt;&gt;设置常数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">param yipusen_1 := 99750.0;<br></code></pre></td></tr></table></figure>
+<h3 id="gt-gt-gt-zpl文件语法"><a href="#gt-gt-gt-zpl文件语法" class="headerlink" title="&gt;&gt;&gt; zpl文件语法"></a>&gt;&gt;&gt; zpl文件语法</h3><h4 id="gt-gt-设置常数"><a href="#gt-gt-设置常数" class="headerlink" title="&gt;&gt;设置常数"></a>&gt;&gt;设置常数</h4><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">param yipusen_1 := 99750.0;<br></code></pre></div></td></tr></table></figure>
 
-<h4 id="gt-gt-设置集合"><a href="#gt-gt-设置集合" class="headerlink" title="&gt;&gt;设置集合"></a>&gt;&gt;设置集合</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> Ix := &#123;0 .. (Xnum-1)&#125;;<br>//这个代表从零到Xnum-1的所有整数，所构成的集合。这种集合一般是遍历变量所用的集合。<br><span class="hljs-built_in">set</span> x_yy := &#123;<span class="hljs-built_in">read</span> <span class="hljs-string">"X@x-~y"</span> as <span class="hljs-string">"&lt;1n,2n&gt;"</span>&#125;;<br>//这种相当于通过读文件的方法读集合。文件中每一行对应集合的一个元素。&lt;1n,2n&gt;代表文件中每一行读入第一列和第二列，并且视为数字。n代表number。1和2代表第一列第二列。<br><span class="hljs-built_in">set</span> x_yy := &#123;<span class="hljs-built_in">read</span> <span class="hljs-string">"X@x-~y"</span> as <span class="hljs-string">"&lt;1n,3n&gt;"</span>&#125;;<br>//同样上面的例子改了一点。代表读文件每一行的第一列和第三列。以数字的格式读入。这个集合元素也相当于一个个二元数组。由此看来zpl本身也自带那么一点文件处理能力的。<br></code></pre></td></tr></table></figure>
+<h4 id="gt-gt-设置集合"><a href="#gt-gt-设置集合" class="headerlink" title="&gt;&gt;设置集合"></a>&gt;&gt;设置集合</h4><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> Ix := &#123;0 .. (Xnum-1)&#125;;<br>//这个代表从零到Xnum-1的所有整数，所构成的集合。这种集合一般是遍历变量所用的集合。<br><span class="hljs-built_in">set</span> x_yy := &#123;<span class="hljs-built_in">read</span> <span class="hljs-string">"X@x-~y"</span> as <span class="hljs-string">"&lt;1n,2n&gt;"</span>&#125;;<br>//这种相当于通过读文件的方法读集合。文件中每一行对应集合的一个元素。&lt;1n,2n&gt;代表文件中每一行读入第一列和第二列，并且视为数字。n代表number。1和2代表第一列第二列。<br><span class="hljs-built_in">set</span> x_yy := &#123;<span class="hljs-built_in">read</span> <span class="hljs-string">"X@x-~y"</span> as <span class="hljs-string">"&lt;1n,3n&gt;"</span>&#125;;<br>//同样上面的例子改了一点。代表读文件每一行的第一列和第三列。以数字的格式读入。这个集合元素也相当于一个个二元数组。由此看来zpl本身也自带那么一点文件处理能力的。<br></code></pre></div></td></tr></table></figure>
 
-<h4 id="gt-gt-forall语句"><a href="#gt-gt-forall语句" class="headerlink" title="&gt;&gt;forall语句"></a>&gt;&gt;forall语句</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">//如果集合是元素是一维的那么如下<br>forall &lt;i&gt; <span class="hljs-keyword">in</span> 集合名 <span class="hljs-keyword">do</span><br>	语句<br>//这样的语法，相当于对于这个集合中每一个元素，都执行语句。从而实现定义多个约束 。<br>//如果集合元素是高维<br>forall &lt;i,j,k&gt; <span class="hljs-keyword">in</span> 集合名 <span class="hljs-keyword">do</span><br>	语句<br>//注意！！！！！其中i，j，k相当于声明变量了，语句中可以直接用。你也可以直接 forall &lt;3,j,k&gt; <span class="hljs-keyword">in</span> 集合名 <span class="hljs-keyword">do</span>。这样子，来抽取集合中所有第一个元素是3的。这个用法很关键。<br></code></pre></td></tr></table></figure>
+<h4 id="gt-gt-forall语句"><a href="#gt-gt-forall语句" class="headerlink" title="&gt;&gt;forall语句"></a>&gt;&gt;forall语句</h4><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">//如果集合是元素是一维的那么如下<br>forall &lt;i&gt; <span class="hljs-keyword">in</span> 集合名 <span class="hljs-keyword">do</span><br>	语句<br>//这样的语法，相当于对于这个集合中每一个元素，都执行语句。从而实现定义多个约束 。<br>//如果集合元素是高维<br>forall &lt;i,j,k&gt; <span class="hljs-keyword">in</span> 集合名 <span class="hljs-keyword">do</span><br>	语句<br>//注意！！！！！其中i，j，k相当于声明变量了，语句中可以直接用。你也可以直接 forall &lt;3,j,k&gt; <span class="hljs-keyword">in</span> 集合名 <span class="hljs-keyword">do</span>。这样子，来抽取集合中所有第一个元素是3的。这个用法很关键。<br></code></pre></div></td></tr></table></figure>
 
-<h4 id="gt-gt-sum-语句"><a href="#gt-gt-sum-语句" class="headerlink" title="&gt;&gt;sum 语句"></a>&gt;&gt;sum 语句</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sum &lt;j,k&gt; <span class="hljs-keyword">in</span> y_zz:y[j]<br>//代表y_zz中所有元素，y[j]相加<br>//也就是说sum语句不会像forall一样执行多次从而相当于生成多个约束或者多个语句。sum相当于我们数学中的连加符号。<br>//注意！！！！！！sum &lt;i&gt; <span class="hljs-keyword">in</span> Ix <span class="hljs-keyword">do</span>.这样也是可以的。也就是说sum语句最后<span class="hljs-keyword">do</span>或者冒号都可以。而forall只能是<span class="hljs-keyword">do</span>。<br></code></pre></td></tr></table></figure>
+<h4 id="gt-gt-sum-语句"><a href="#gt-gt-sum-语句" class="headerlink" title="&gt;&gt;sum 语句"></a>&gt;&gt;sum 语句</h4><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sum &lt;j,k&gt; <span class="hljs-keyword">in</span> y_zz:y[j]<br>//代表y_zz中所有元素，y[j]相加<br>//也就是说sum语句不会像forall一样执行多次从而相当于生成多个约束或者多个语句。sum相当于我们数学中的连加符号。<br>//注意！！！！！！sum &lt;i&gt; <span class="hljs-keyword">in</span> Ix <span class="hljs-keyword">do</span>.这样也是可以的。也就是说sum语句最后<span class="hljs-keyword">do</span>或者冒号都可以。而forall只能是<span class="hljs-keyword">do</span>。<br></code></pre></div></td></tr></table></figure>
 
-<h4 id="gt-gt-设置变量"><a href="#gt-gt-设置变量" class="headerlink" title="&gt;&gt;设置变量"></a>&gt;&gt;设置变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">var z[Iz] binary;<br>//代表变量z，Iz是个集合，它的声明见实例。binary代表z是一个0，1变量。学姐暂时只用到01，别的变量声明方法见documentary或者直接问我。<br></code></pre></td></tr></table></figure>
+<h4 id="gt-gt-设置变量"><a href="#gt-gt-设置变量" class="headerlink" title="&gt;&gt;设置变量"></a>&gt;&gt;设置变量</h4><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">var z[Iz] binary;<br>//代表变量z，Iz是个集合，它的声明见实例。binary代表z是一个0，1变量。学姐暂时只用到01，别的变量声明方法见documentary或者直接问我。<br></code></pre></div></td></tr></table></figure>
 
-<h4 id="gt-gt-设置目标函数"><a href="#gt-gt-设置目标函数" class="headerlink" title="&gt;&gt;设置目标函数"></a>&gt;&gt;设置目标函数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">模板中有两个。参考模板最大目标和最小目标都有。<br></code></pre></td></tr></table></figure>
+<h4 id="gt-gt-设置目标函数"><a href="#gt-gt-设置目标函数" class="headerlink" title="&gt;&gt;设置目标函数"></a>&gt;&gt;设置目标函数</h4><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">模板中有两个。参考模板最大目标和最小目标都有。<br></code></pre></div></td></tr></table></figure>
 
-<h4 id="gt-gt-设置约束"><a href="#gt-gt-设置约束" class="headerlink" title="&gt;&gt;设置约束"></a>&gt;&gt;设置约束</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">模板中subto开头的，非常直观，不再赘述。<br></code></pre></td></tr></table></figure>
+<h4 id="gt-gt-设置约束"><a href="#gt-gt-设置约束" class="headerlink" title="&gt;&gt;设置约束"></a>&gt;&gt;设置约束</h4><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">模板中subto开头的，非常直观，不再赘述。<br></code></pre></div></td></tr></table></figure>
 
 <h4 id="gt-gt-with-语句"><a href="#gt-gt-with-语句" class="headerlink" title="&gt;&gt;with 语句"></a>&gt;&gt;with 语句</h4><label style="color:green">
 这东西相当于添加限制条件，从而不去对sum in 或者 forall in 的集合的所有元素都执行:<br>
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">可以是 with <span class="hljs-keyword">in</span> 集合名。通过一个集合来限制。<br>也可以 with <span class="hljs-keyword">in</span> 表达式。<br>比如 “ forall &lt;i&gt; <span class="hljs-keyword">in</span> Ix with i&lt;10 : ”<br>这样的语句来让forall只针对前10个i来进行处理。<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">可以是 with <span class="hljs-keyword">in</span> 集合名。通过一个集合来限制。<br>也可以 with <span class="hljs-keyword">in</span> 表达式。<br>比如 “ forall &lt;i&gt; <span class="hljs-keyword">in</span> Ix with i&lt;10 : ”<br>这样的语句来让forall只针对前10个i来进行处理。<br></code></pre></div></td></tr></table></figure>
 
 <h2 id="gt-gt-gt-gt-同步教程"><a href="#gt-gt-gt-gt-同步教程" class="headerlink" title="&gt;&gt;&gt;&gt;同步教程"></a>&gt;&gt;&gt;&gt;同步教程</h2><label style="color:blue">
 这个有时间我写把，虽然我估计这事儿就扔这儿了，哈哈。

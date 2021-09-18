@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="" data-default-color-scheme=&#34;auto&#34;>
+<html lang="" data-default-color-scheme=&#34;light&#34;>
 
 
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="patoh相关">
   <meta name="author" content="Li Guangming">
   <meta name="keywords" content>
@@ -51,7 +51,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"___","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#F0FFFF","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -210,7 +210,7 @@
    啥都不说了，我上来先把下载方式贴上，不会解压的话看我<a href="https://lostedsailor.github.io/2019/06/19/SystemLearning/Linux%E6%95%99%E7%A8%8B(1)/" target="_blank" rel="noopener">另一篇博客<a><br>
 </a></a></label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://www.cc.gatech.edu/~umit/PaToH/patoh-Linux-x86_64.tar.gz<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">wget https://www.cc.gatech.edu/~umit/PaToH/patoh-Linux-x86_64.tar.gz<br></code></pre></div></td></tr></table></figure>
 
 <br>
 
@@ -261,7 +261,7 @@
    直接上例子（111.u）：
 
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">1 8 9 28 3<br>10 8 6 3 5 2<br>15 4 5 1 7<br>13 4 2 5 7<br>18 4 7<br>25 3 5<br>20 8 2 4<br>14 6 5 2<br>27 5 7 2<br>29 8 4<br>80 85 30 55 42 39 90 102<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">1 8 9 28 3<br>10 8 6 3 5 2<br>15 4 5 1 7<br>13 4 2 5 7<br>18 4 7<br>25 3 5<br>20 8 2 4<br>14 6 5 2<br>27 5 7 2<br>29 8 4<br>80 85 30 55 42 39 90 102<br></code></pre></div></td></tr></table></figure>
 
 <br>
 <label style="color:darkblue;">
@@ -282,21 +282,21 @@
    调用方法如下：
 
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">&gt;patoh &lt;hypergraph-file&gt; &lt;number-of-parts&gt; parameter<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">&gt;patoh &lt;hypergraph-file&gt; &lt;number-of-parts&gt; parameter<br></code></pre></div></td></tr></table></figure>
 
 <br>
 <label style="color:darkblue;">
    例如执行如下代码：（其中111.u就是上面hypergraph-file的那个例子）
 
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">&gt;patoh 111.u 5  RA=3<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">&gt;patoh 111.u 5  RA=3<br></code></pre></div></td></tr></table></figure>
 
 <br>
 <label style="color:darkblue;">
    得到结果：
 </label>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs bash">+++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>+++ PaToH v3.3 (c) Nov 1999-, by  Umit V. Catalyurek<br>+++ Build Date: Wed Jul 15 00:24:52 2020 -0400<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++<br><br>********************************************************************************<br>Hypergraph : 111.u   <span class="hljs-comment">#Cells :     8   #Nets :     9   #Pins :    28</span><br>********************************************************************************<br> 5-way partitioning results of PaToH:<br><br> <span class="hljs-string">'Con - 1'</span> Cost:   204<br> Part Weights   : Min=         69 (0.340) Max=        157 (0.501)<br>---- BALANCE IS NOT TIGHT ENOUGH ----<br>--------------------------------------------------------------------------------<br>I/O          :       0.000 sec<br>I.Perm/Cons.H:       0.000 sec  ( 0.4%)<br>Coarsening   :       0.000 sec  ( 0.3%)<br>Partitioning :       0.001 sec  (85.1%)<br>Uncoarsening :       0.000 sec  ( 8.4%)<br>Total        :       0.001 sec<br>Total (w I/O):       0.001 sec<br>--------------------------------------------------------------------------------<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">+++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>+++ PaToH v3.3 (c) Nov 1999-, by  Umit V. Catalyurek<br>+++ Build Date: Wed Jul 15 00:24:52 2020 -0400<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++<br><br>********************************************************************************<br>Hypergraph : 111.u   <span class="hljs-comment">#Cells :     8   #Nets :     9   #Pins :    28</span><br>********************************************************************************<br> 5-way partitioning results of PaToH:<br><br> <span class="hljs-string">'Con - 1'</span> Cost:   204<br> Part Weights   : Min=         69 (0.340) Max=        157 (0.501)<br>---- BALANCE IS NOT TIGHT ENOUGH ----<br>--------------------------------------------------------------------------------<br>I/O          :       0.000 sec<br>I.Perm/Cons.H:       0.000 sec  ( 0.4%)<br>Coarsening   :       0.000 sec  ( 0.3%)<br>Partitioning :       0.001 sec  (85.1%)<br>Uncoarsening :       0.000 sec  ( 8.4%)<br>Total        :       0.001 sec<br>Total (w I/O):       0.001 sec<br>--------------------------------------------------------------------------------<br></code></pre></div></td></tr></table></figure>
 
 <br>
 <label style="color:darkblue;">

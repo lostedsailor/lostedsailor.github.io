@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="" data-default-color-scheme=&#34;auto&#34;>
+<html lang="" data-default-color-scheme=&#34;light&#34;>
 
 
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="Awk模板">
   <meta name="author" content="Li Guangming">
   <meta name="keywords" content>
@@ -51,7 +51,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"___","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#F0FFFF","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -203,9 +203,9 @@
             
             <div class="markdown-body">
               <h2 id="Awk模板"><a href="#Awk模板" class="headerlink" title="Awk模板"></a><label style="color:blue">Awk模板</label></h2><a id="more"></a>
-<h2 id="自己用的模板"><a href="#自己用的模板" class="headerlink" title="自己用的模板"></a><label style="color:red">自己用的模板</label></h2><h3 id="gt-gt-gt-ppppppp-awk-注意最后别漏文件名"><a href="#gt-gt-gt-ppppppp-awk-注意最后别漏文件名" class="headerlink" title="&gt;&gt;&gt;ppppppp.awk(注意最后别漏文件名)"></a>&gt;&gt;&gt;ppppppp.awk(注意最后别漏文件名)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">awk <span class="hljs-string">'&#123;<br>		len = split($0 , table , ",");<br>		if(table[1]!="j")<br>			for(  i = 3 ; i &lt;= len ;i++)<br>			&#123;<br>				printf "%s %s\n",table[1],table[i];<br>			&#125;<br>&#125;'</span> Y.csv<br></code></pre></td></tr></table></figure>
+<h2 id="自己用的模板"><a href="#自己用的模板" class="headerlink" title="自己用的模板"></a><label style="color:red">自己用的模板</label></h2><h3 id="gt-gt-gt-ppppppp-awk-注意最后别漏文件名"><a href="#gt-gt-gt-ppppppp-awk-注意最后别漏文件名" class="headerlink" title="&gt;&gt;&gt;ppppppp.awk(注意最后别漏文件名)"></a>&gt;&gt;&gt;ppppppp.awk(注意最后别漏文件名)</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">awk <span class="hljs-string">'&#123;<br>		len = split($0 , table , ",");<br>		if(table[1]!="j")<br>			for(  i = 3 ; i &lt;= len ;i++)<br>			&#123;<br>				printf "%s %s\n",table[1],table[i];<br>			&#125;<br>&#125;'</span> Y.csv<br></code></pre></div></td></tr></table></figure>
 
-<h3 id="gt-gt-gt-qqqqqqqqq-awk"><a href="#gt-gt-gt-qqqqqqqqq-awk" class="headerlink" title="&gt;&gt;&gt;qqqqqqqqq.awk"></a>&gt;&gt;&gt;qqqqqqqqq.awk</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">awk <span class="hljs-string">'&#123;<br>	len = split($0 , table , ",");<br>	if(table[1]!= "j")<br>		for(i = 2; i &lt;= len ;i ++)<br>		&#123;<br>			printf "%s %s\n" ,table[1],table[i];<br>		&#125;<br>&#125;'</span> YrelateY.csv<br></code></pre></td></tr></table></figure>
+<h3 id="gt-gt-gt-qqqqqqqqq-awk"><a href="#gt-gt-gt-qqqqqqqqq-awk" class="headerlink" title="&gt;&gt;&gt;qqqqqqqqq.awk"></a>&gt;&gt;&gt;qqqqqqqqq.awk</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">awk <span class="hljs-string">'&#123;<br>	len = split($0 , table , ",");<br>	if(table[1]!= "j")<br>		for(i = 2; i &lt;= len ;i ++)<br>		&#123;<br>			printf "%s %s\n" ,table[1],table[i];<br>		&#125;<br>&#125;'</span> YrelateY.csv<br></code></pre></div></td></tr></table></figure>
 
 
             </div>

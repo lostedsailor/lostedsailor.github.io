@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="" data-default-color-scheme=&#34;auto&#34;>
+<html lang="" data-default-color-scheme=&#34;light&#34;>
 
 
 
@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="vim命令学习不定期更新">
   <meta name="author" content="Li Guangming">
   <meta name="keywords" content>
@@ -51,7 +51,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":4,"cursorChar":"___","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#F0FFFF","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -203,15 +203,15 @@
             
             <div class="markdown-body">
               <h2 id="vim命令学习不定期更新"><a href="#vim命令学习不定期更新" class="headerlink" title="vim命令学习不定期更新"></a><label style="color:yellow">vim命令学习不定期更新</label></h2><a id="more"></a>
-<h2 id="最近因为要使用vim-所以不定期更新新学到的vim干货-所有条目都将以“-gt-gt-gt-”开头"><a href="#最近因为要使用vim-所以不定期更新新学到的vim干货-所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="最近因为要使用vim,所以不定期更新新学到的vim干货.所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">最近因为要使用vim,所以不定期更新新学到的vim干货.所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-sudo-apt-get-install-vim"><a href="#gt-gt-gt-sudo-apt-get-install-vim" class="headerlink" title="&gt;&gt;&gt;sudo apt-get install vim"></a>&gt;&gt;&gt;sudo apt-get install vim</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">上来先下载vim，centos可能用yum版本。<br>注意有一种可能的下载失败是apt-get没有更新。<br></code></pre></td></tr></table></figure>
+<h2 id="最近因为要使用vim-所以不定期更新新学到的vim干货-所有条目都将以“-gt-gt-gt-”开头"><a href="#最近因为要使用vim-所以不定期更新新学到的vim干货-所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="最近因为要使用vim,所以不定期更新新学到的vim干货.所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">最近因为要使用vim,所以不定期更新新学到的vim干货.所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-sudo-apt-get-install-vim"><a href="#gt-gt-gt-sudo-apt-get-install-vim" class="headerlink" title="&gt;&gt;&gt;sudo apt-get install vim"></a>&gt;&gt;&gt;sudo apt-get install vim</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">上来先下载vim，centos可能用yum版本。<br>注意有一种可能的下载失败是apt-get没有更新。<br></code></pre></div></td></tr></table></figure>
 
-<h3 id="gt-gt-gt-翻页命令"><a href="#gt-gt-gt-翻页命令" class="headerlink" title="&gt;&gt;&gt;翻页命令"></a>&gt;&gt;&gt;翻页命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">向上翻页：<span class="hljs-string">"ctrl+f"</span><br>向下翻页：<span class="hljs-string">"ctrl+b"</span><br>（f代表forward，b代表back）<br>---------------------------------<br>向上翻半页：<span class="hljs-string">"ctrl+u"</span><br>向下翻半页：<span class="hljs-string">"ctrl+d"</span><br>---------------------------------<br>向上滚一行：<span class="hljs-string">"ctrl+e"</span><br>向下滚一行：<span class="hljs-string">"ctrl+y"</span><br>---------------------------------<br><span class="hljs-string">"zz"</span>让光标所在的行居于屏幕中间<br><span class="hljs-string">"zt"</span>让光标所在的行居于屏幕最上方（t代表top）<br><span class="hljs-string">"zb"</span>让光标所在的行居于屏幕最下方（b代表bottom）<br>---------------------------------<br></code></pre></td></tr></table></figure>
+<h3 id="gt-gt-gt-翻页命令"><a href="#gt-gt-gt-翻页命令" class="headerlink" title="&gt;&gt;&gt;翻页命令"></a>&gt;&gt;&gt;翻页命令</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">向上翻页：<span class="hljs-string">"ctrl+f"</span><br>向下翻页：<span class="hljs-string">"ctrl+b"</span><br>（f代表forward，b代表back）<br>---------------------------------<br>向上翻半页：<span class="hljs-string">"ctrl+u"</span><br>向下翻半页：<span class="hljs-string">"ctrl+d"</span><br>---------------------------------<br>向上滚一行：<span class="hljs-string">"ctrl+e"</span><br>向下滚一行：<span class="hljs-string">"ctrl+y"</span><br>---------------------------------<br><span class="hljs-string">"zz"</span>让光标所在的行居于屏幕中间<br><span class="hljs-string">"zt"</span>让光标所在的行居于屏幕最上方（t代表top）<br><span class="hljs-string">"zb"</span>让光标所在的行居于屏幕最下方（b代表bottom）<br>---------------------------------<br></code></pre></div></td></tr></table></figure>
 
-<h3 id="gt-gt-gt-按字符串在文件中搜索"><a href="#gt-gt-gt-按字符串在文件中搜索" class="headerlink" title="&gt;&gt;&gt;按字符串在文件中搜索"></a>&gt;&gt;&gt;按字符串在文件中搜索</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">从开头搜索<br>在命令模式下，输入<span class="hljs-string">"/你要查找的字符"</span><br>按下回车，可以看到vim把光标移动到该字符处<br>再按n（小写）查看下一个匹配<br>按N（大写）查看上一个匹配，<br>----------------------------------<br>从结尾处搜索<br><span class="hljs-string">"？要搜索的字符串或字符"</span><br>其余同从开头搜索<br>----------------------------------<br>搜索后，打开别的文件发现也被高亮了，怎么关闭<br>命令行模式下，输入：<span class="hljs-string">"nohlsearch"</span><br>也可以：<span class="hljs-string">"set nohlsearch"</span> <br>可以简写成<span class="hljs-string">"noh"</span>和<span class="hljs-string">"set-noh"</span><br></code></pre></td></tr></table></figure>
+<h3 id="gt-gt-gt-按字符串在文件中搜索"><a href="#gt-gt-gt-按字符串在文件中搜索" class="headerlink" title="&gt;&gt;&gt;按字符串在文件中搜索"></a>&gt;&gt;&gt;按字符串在文件中搜索</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">从开头搜索<br>在命令模式下，输入<span class="hljs-string">"/你要查找的字符"</span><br>按下回车，可以看到vim把光标移动到该字符处<br>再按n（小写）查看下一个匹配<br>按N（大写）查看上一个匹配，<br>----------------------------------<br>从结尾处搜索<br><span class="hljs-string">"？要搜索的字符串或字符"</span><br>其余同从开头搜索<br>----------------------------------<br>搜索后，打开别的文件发现也被高亮了，怎么关闭<br>命令行模式下，输入：<span class="hljs-string">"nohlsearch"</span><br>也可以：<span class="hljs-string">"set nohlsearch"</span> <br>可以简写成<span class="hljs-string">"noh"</span>和<span class="hljs-string">"set-noh"</span><br></code></pre></div></td></tr></table></figure>
 
-<h3 id="gt-gt-gt-vim跳转到指定行"><a href="#gt-gt-gt-vim跳转到指定行" class="headerlink" title="&gt;&gt;&gt;vim跳转到指定行"></a>&gt;&gt;&gt;vim跳转到指定行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">第一种方法<br>直接在命令行模式输入<span class="hljs-string">"：所要跳转的行数"</span>即可<br>----------------------------------<br>第二种方法可以在外面直接进入并且跳转行<br><span class="hljs-string">"vim +n filename"</span>(注意这里意思是要输入加号)<br></code></pre></td></tr></table></figure>
+<h3 id="gt-gt-gt-vim跳转到指定行"><a href="#gt-gt-gt-vim跳转到指定行" class="headerlink" title="&gt;&gt;&gt;vim跳转到指定行"></a>&gt;&gt;&gt;vim跳转到指定行</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">第一种方法<br>直接在命令行模式输入<span class="hljs-string">"：所要跳转的行数"</span>即可<br>----------------------------------<br>第二种方法可以在外面直接进入并且跳转行<br><span class="hljs-string">"vim +n filename"</span>(注意这里意思是要输入加号)<br></code></pre></div></td></tr></table></figure>
 
-<h3 id="gt-gt-gt-显示行号"><a href="#gt-gt-gt-显示行号" class="headerlink" title="&gt;&gt;&gt;显示行号"></a>&gt;&gt;&gt;显示行号</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">命令模式直接：<span class="hljs-string">":set number"</span><br>也可以通过设置永久显示行号，这个我回头有时间会更新在这里~~~~~~~~~~~~~~~<br></code></pre></td></tr></table></figure>
+<h3 id="gt-gt-gt-显示行号"><a href="#gt-gt-gt-显示行号" class="headerlink" title="&gt;&gt;&gt;显示行号"></a>&gt;&gt;&gt;显示行号</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">命令模式直接：<span class="hljs-string">":set number"</span><br>也可以通过设置永久显示行号，这个我回头有时间会更新在这里~~~~~~~~~~~~~~~<br></code></pre></div></td></tr></table></figure>
 
 <h3 id="gt-gt-gt-新的使用干货正在出炉"><a href="#gt-gt-gt-新的使用干货正在出炉" class="headerlink" title="&gt;&gt;&gt;新的使用干货正在出炉"></a>&gt;&gt;&gt;新的使用干货正在出炉</h3>
             </div>
@@ -240,9 +240,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2019/06/18/IDElearning/GitHub教程/">
+                      <a href="/2019/06/19/SystemLearning/Linux教程(1)/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">GitHub教程</span>
+                        <span class="hidden-mobile">Linux教程(1)</span>
                         <span class="visible-mobile">Vorheriger</span>
                       </a>
                     
@@ -250,8 +250,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2019/06/01/aboutme/aboutme/">
-                        <span class="hidden-mobile">aboutme</span>
+                      <a href="/2019/06/18/IDElearning/GitHub教程/">
+                        <span class="hidden-mobile">GitHub教程</span>
                         <span class="visible-mobile">Nächster</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
