@@ -151,7 +151,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1k 字
+      1.1k 字
     </span>
   
 
@@ -161,7 +161,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12
+      13
        分钟
     </span>
   
@@ -207,7 +207,7 @@
 <!-- ## <label style="color:red">自己用的模板</labels> -->
 
 <label>
-   啥都不说了，我上来先把下载方式贴上，不会解压的话看我<a href="https://lostedsailor.github.io/2019/06/19/SystemLearning/Linux%E6%95%99%E7%A8%8B(1)/" target="_blank" rel="noopener">另一篇博客<a><br>
+   上来先把下载方式贴上，不会解压的话看我<a href="https://lostedsailor.github.io/2019/06/19/SystemLearning/Linux%E6%95%99%E7%A8%8B(1)/" target="_blank" rel="noopener">另一篇博客<a><br>
 </a></a></label>
 
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">wget https://www.cc.gatech.edu/~umit/PaToH/patoh-Linux-x86_64.tar.gz<br></code></pre></div></td></tr></table></figure>
@@ -242,9 +242,13 @@
 </label>
 <br>
 
-<h3 id="三-patoh的参数和设置方法"><a href="#三-patoh的参数和设置方法" class="headerlink" title="三. patoh的参数和设置方法"></a>三. patoh的参数和设置方法</h3><br>
-<label style="color:darkblue;">
-   这部分仍然不重要，我后面补，但是值得注意的是patoh的参数设置会影响计算速度。<br>
+<h3 id="三-patoh的参数和设置方法"><a href="#三-patoh的参数和设置方法" class="headerlink" title="三. patoh的参数和设置方法"></a>三. patoh的参数和设置方法</h3><h4 id="IB"><a href="#IB" class="headerlink" title="IB"></a>IB</h4><label style="color:darkblue;">
+   先说一个重要参数IB（imbalance）这个参数的取值是0到0.5的浮点型.<br>
+   其含义就是超图划分问题提到的那个不平衡参数.大概意思就是： Spend_of_each_net  &lt; Average_spend_of_net*(1+IB)<br>
+</label>
+
+<h4 id="other"><a href="#other" class="headerlink" title="other"></a>other</h4><label style="color:darkblue;">
+   剩下参数目前不觉得很重要，我后面补，但是值得注意的是patoh的参数设置会影响计算速度。<br>
    我自己测试的时候，目前可以确定的是：对于一秒内可以出来的问题，RA这个参数会导致计算速度在0.1sec到0.9sec(得出结论时间)之间波动。<br>
    RA是一个取值1到10的整数参数，不同的值代表使用不同的算法。<br>
 </label>
@@ -289,7 +293,7 @@
    例如执行如下代码：（其中111.u就是上面hypergraph-file的那个例子）
 
 
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">&gt;patoh 111.u 5  RA=3<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">&gt;patoh 111.u 5  RA=3 IB=0.1<br></code></pre></div></td></tr></table></figure>
 
 <br>
 <label style="color:darkblue;">
