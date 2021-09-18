@@ -244,7 +244,7 @@
 
 <h3 id="三-patoh的参数"><a href="#三-patoh的参数" class="headerlink" title="三. patoh的参数"></a>三. patoh的参数</h3><h4 id="IB"><a href="#IB" class="headerlink" title="IB"></a>IB</h4><label style="color:darkblue;">
    先说一个重要参数IB（imbalance）这个参数的取值是0到0.5的浮点型.<br>
-   其含义就是超图划分问题提到的那个不平衡参数.大概意思就是： Spend_of_each_net  &lt; Average_spend_of_net*(1+IB)<br>
+   其含义就是超图划分问题提到的那个不平衡参数.大概意思就是： Spend_of_each_part  &lt; Average_spend_of_part*(1+IB)<br>
    如果设置的这个IB太小，导致问题没解的话，会提示---- BALANCE IS NOT TIGHT ENOUGH ----（如下所示）.<br>
    当然我觉得这东西按迭代算法的话意义不大，但是转化成整数规划问题求解的话，我估计这个参数非常重要,会影响求解时间。<br>
 </label>
@@ -369,7 +369,7 @@
                     
                       <a href="/2020/03/22/ProgrammingLanguage/ipet/">
                         <span class="hidden-mobile">ipet</span>
-                        <span class="visible-mobile">Next</span>
+                        <span class="visible-mobile">Nächster</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -446,7 +446,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -454,7 +454,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">keyword</label>
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
