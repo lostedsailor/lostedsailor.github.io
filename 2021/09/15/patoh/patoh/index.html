@@ -151,7 +151,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      1.3k 字
     </span>
   
 
@@ -161,7 +161,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      13
+      16
        分钟
     </span>
   
@@ -242,10 +242,17 @@
 </label>
 <br>
 
-<h3 id="三-patoh的参数和设置方法"><a href="#三-patoh的参数和设置方法" class="headerlink" title="三. patoh的参数和设置方法"></a>三. patoh的参数和设置方法</h3><h4 id="IB"><a href="#IB" class="headerlink" title="IB"></a>IB</h4><label style="color:darkblue;">
+<h3 id="三-patoh的参数"><a href="#三-patoh的参数" class="headerlink" title="三. patoh的参数"></a>三. patoh的参数</h3><h4 id="IB"><a href="#IB" class="headerlink" title="IB"></a>IB</h4><label style="color:darkblue;">
    先说一个重要参数IB（imbalance）这个参数的取值是0到0.5的浮点型.<br>
    其含义就是超图划分问题提到的那个不平衡参数.大概意思就是： Spend_of_each_net  &lt; Average_spend_of_net*(1+IB)<br>
+   如果设置的这个IB太小，导致问题没解的话，会提示---- BALANCE IS NOT TIGHT ENOUGH ----（如下所示）.<br>
+   当然我觉得这东西按迭代算法的话意义不大，但是转化成整数规划问题求解的话，我估计这个参数非常重要,会影响求解时间。<br>
 </label>
+
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>+++ PaToH v3.3 (c) Nov 1999-, by  Umit V. Catalyurek<br>+++ Build Date: Wed Jul 15 00:24:52 2020 -0400<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++<br><br>********************************************************************************<br>Hypergraph : 111.u   <span class="hljs-comment">#Cells :     8   #Nets :     9   #Pins :    28</span><br>********************************************************************************<br> 5-way partitioning results of PaToH:<br><br> <span class="hljs-string">'Con - 1'</span> Cost:   213<br> Part Weights   : Min=         80 (0.235) Max=        145 (0.386)<br>---- BALANCE IS NOT TIGHT ENOUGH ----<br>--------------------------------------------------------------------------------<br>I/O          :       0.000 sec<br>I.Perm/Cons.H:       0.000 sec  ( 0.6%)<br>Coarsening   :       0.000 sec  ( 0.3%)<br>Partitioning :       0.001 sec  (82.5%)<br>Uncoarsening :       0.000 sec  (10.6%)<br>Total        :       0.001 sec<br>Total (w I/O):       0.001 sec<br>--------------------------------------------------------------------------------<br></code></pre></div></td></tr></table></figure>
+
+<br>
+
 
 <h4 id="other"><a href="#other" class="headerlink" title="other"></a>other</h4><label style="color:darkblue;">
    剩下参数目前不觉得很重要，我后面补，但是值得注意的是patoh的参数设置会影响计算速度。<br>
@@ -293,7 +300,7 @@
    例如执行如下代码：（其中111.u就是上面hypergraph-file的那个例子）
 
 
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">&gt;patoh 111.u 5  RA=3 IB=0.1<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">&gt;patoh 111.u 5  RA=3 IB=0.5<br></code></pre></div></td></tr></table></figure>
 
 <br>
 <label style="color:darkblue;">
@@ -362,7 +369,7 @@
                     
                       <a href="/2020/03/22/ProgrammingLanguage/ipet/">
                         <span class="hidden-mobile">ipet</span>
-                        <span class="visible-mobile">Nächster</span>
+                        <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -439,7 +446,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -447,7 +454,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+          <label data-error="x" data-success="v" for="local-search-input">keyword</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
