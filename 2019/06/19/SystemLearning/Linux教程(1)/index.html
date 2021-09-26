@@ -151,7 +151,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      1.4k 字
     </span>
   
 
@@ -161,7 +161,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      16
+      17
        分钟
     </span>
   
@@ -204,7 +204,9 @@
             <div class="markdown-body">
               <h2 id="Linux命令学习不定期更新"><a href="#Linux命令学习不定期更新" class="headerlink" title="Linux命令学习不定期更新"></a><label style="color:blue">Linux命令学习不定期更新</label></h2><a id="more"></a>
 
-<h2 id="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头"><a href="#这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地"><a href="#gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地" class="headerlink" title="&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地"></a>&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">使用<span class="hljs-string">"scp"</span>命令.<br><span class="hljs-string">"（注意，：/开头的是从根目录找的，要是想放到个人目录下，直接去掉第一个斜杠XXX/XXX/XXX这样即可，或者~/XXX/XXX也可以）"</span><br><span class="hljs-string">"scp /home/work/source.txt work@192.168.0.10:/home/work/"</span>   <br><span class="hljs-comment">#把本地的source.txt文件拷贝到192.168.0.10机器上的/home/work目录下。</span><br><span class="hljs-string">"scp work@192.168.0.10:/home/work/source.txt /home/work/"</span>   <br><span class="hljs-comment">#把192.168.0.10机器上的source.txt文件拷贝到本地的/home/work目录下</span><br><span class="hljs-string">"scp work@192.168.0.10:/home/work/source.txt work@192.168.0.11:/home/work/"</span>   <br><span class="hljs-comment">#把192.168.0.10机器上的source.txt文件拷贝到192.168.0.11机器的/home/work目录下</span><br><span class="hljs-string">"scp -r /home/work/sourcedir work@192.168.0.10:/home/work/"</span>   <br><span class="hljs-comment">#拷贝文件夹，加-r参数.其他的都同上</span><br></code></pre></div></td></tr></table></figure>
+<h2 id="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头"><a href="#这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“-gt-gt-gt-”开头" class="headerlink" title="这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头"></a><label style="color:red">这里学习linux的一些简单命令，不涉及如何写shell，如何配置linux等等的比较复杂点的东西。所有条目都将以“&gt;&gt;&gt;”开头</label></h2><h3 id="gt-gt-gt-linux后台跑程序，查看程序，终止程序"><a href="#gt-gt-gt-linux后台跑程序，查看程序，终止程序" class="headerlink" title="&gt;&gt;&gt;linux后台跑程序，查看程序，终止程序"></a>&gt;&gt;&gt;linux后台跑程序，查看程序，终止程序</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">nohup  命令 &amp;  ..............后台跑程序<br>ps 显示当前的进程<br>ps -x 显示进程以及进程号<br><span class="hljs-built_in">kill</span> -s num 杀死某个进程,num位进程对应的进程号<br><span class="hljs-built_in">kill</span> -s 9 （这个貌似等价于 <span class="hljs-built_in">kill</span> -s -KILL但没试过）强制杀死某个进程。非常有用<br></code></pre></div></td></tr></table></figure>
+
+<h3 id="gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地"><a href="#gt-gt-gt-如何传文件到服务器或者从服务器下载文件到本地" class="headerlink" title="&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地"></a>&gt;&gt;&gt;如何传文件到服务器或者从服务器下载文件到本地</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">使用<span class="hljs-string">"scp"</span>命令.<br><span class="hljs-string">"（注意，：/开头的是从根目录找的，要是想放到个人目录下，直接去掉第一个斜杠XXX/XXX/XXX这样即可，或者~/XXX/XXX也可以）"</span><br><span class="hljs-string">"scp /home/work/source.txt work@192.168.0.10:/home/work/"</span>   <br><span class="hljs-comment">#把本地的source.txt文件拷贝到192.168.0.10机器上的/home/work目录下。</span><br><span class="hljs-string">"scp work@192.168.0.10:/home/work/source.txt /home/work/"</span>   <br><span class="hljs-comment">#把192.168.0.10机器上的source.txt文件拷贝到本地的/home/work目录下</span><br><span class="hljs-string">"scp work@192.168.0.10:/home/work/source.txt work@192.168.0.11:/home/work/"</span>   <br><span class="hljs-comment">#把192.168.0.10机器上的source.txt文件拷贝到192.168.0.11机器的/home/work目录下</span><br><span class="hljs-string">"scp -r /home/work/sourcedir work@192.168.0.10:/home/work/"</span>   <br><span class="hljs-comment">#拷贝文件夹，加-r参数.其他的都同上</span><br></code></pre></div></td></tr></table></figure>
 
 <h3 id="gt-gt-gt-分配一个文件所有权限"><a href="#gt-gt-gt-分配一个文件所有权限" class="headerlink" title="&gt;&gt;&gt;分配一个文件所有权限"></a>&gt;&gt;&gt;分配一个文件所有权限</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">使用<span class="hljs-string">"chmod 777 filename"</span>可分配这个文件所有组件所有权限（读，写，执行）<br>其他权限用的时候再看编号即可<br>  ------------------<br>  777代表的分别是用户群组和其他人的权限<br>  也就是说700则是代表用户有所有权限，另外两个没有权限<br>  ------------------<br>  7代表的是二进制中的111等于7，按顺序分别是rwx<br>  所以比如我们说只给读和执行不给写的权限，就是二进制的101，也就是十进制的(1+4=5)<br>  也就是说<span class="hljs-string">"chmod 555 filename"</span>代表的是给所有人读和执行，但是不给写的权限<br></code></pre></div></td></tr></table></figure>
 
@@ -272,16 +274,16 @@
                       <a href="/2019/06/24/ProgrammingLanguage/Awk教程/">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">Awk教程</span>
-                        <span class="visible-mobile">Previous</span>
+                        <span class="visible-mobile">Vorheriger</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2019/06/18/IDElearning/Vim教程/">
-                        <span class="hidden-mobile">Vim教程</span>
-                        <span class="visible-mobile">Next</span>
+                      <a href="/2019/06/18/IDElearning/GitHub教程/">
+                        <span class="hidden-mobile">GitHub教程</span>
+                        <span class="visible-mobile">Nächster</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -358,7 +360,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -366,7 +368,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">keyword</label>
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
