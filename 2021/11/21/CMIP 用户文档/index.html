@@ -151,7 +151,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      942 字
     </span>
   
 
@@ -161,7 +161,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      14
+      13
        分钟
     </span>
   
@@ -222,24 +222,18 @@
 <figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs undefined">Welcome to the COIN-OR fetch and build utility<br><br>For <span class="hljs-keyword">help</span>, run script <span class="hljs-keyword">with</span> <span class="hljs-comment">--help or see https://coin-or.github.io/coinbrew</span><br>Please report issues <span class="hljs-keyword">at</span> https://github.com/coin-<span class="hljs-keyword">or</span>/coinbrew<br>Detailed <span class="hljs-keyword">build</span> documentation <span class="hljs-keyword">at</span> https://coin-or.github.io<br><br>Please <span class="hljs-keyword">choose</span> an <span class="hljs-keyword">action</span> <span class="hljs-keyword">by</span> typing <span class="hljs-number">1</span><span class="hljs-number">-4.</span><br> <span class="hljs-number">1.</span> <span class="hljs-keyword">Fetch</span> <span class="hljs-keyword">source</span> code <span class="hljs-keyword">of</span> a <span class="hljs-keyword">project</span> <span class="hljs-keyword">and</span> its dependencies.<br> <span class="hljs-number">2.</span> <span class="hljs-keyword">Build</span> a <span class="hljs-keyword">project</span> <span class="hljs-keyword">and</span> its dependencies.<br> <span class="hljs-number">3.</span> <span class="hljs-keyword">Install</span> a <span class="hljs-keyword">project</span> <span class="hljs-keyword">and</span> its dependencies.<br> <span class="hljs-number">4.</span> <span class="hljs-keyword">Help</span><br>=&gt;<br></code></pre></div></td></tr></table></figure>
 
 <p>输入 1，然后选择 Clp，选择最新版本，进行 Clp 和依赖文件源码的抓取.</p>
-<h4 id="3-构建和安装"><a href="#3-构建和安装" class="headerlink" title="(3) 构建和安装"></a>(3) 构建和安装</h4><p>再次输入 <code>./coinbrew</code>，键入 2，输入构建路径 <code>./build</code>，之后选择 Clp. 构建完成后会自动进行安装，安装路径默认为 <code>/coinbrew/dist</code>，下用 <code>/path/to/install/dir</code> 表示.</p>
-<p>在用户目录下的 <code>.bashrc</code> 文件末尾添加如下语句(不可直接复制，根据本地的安装路径进行修改)：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs undefined">export PATH=<span class="hljs-variable">$PATH</span><span class="hljs-symbol">:/path/to/install/dir/bin</span><br>export LD_LIBRARY_PATH=<span class="hljs-variable">$LD_LIBRARY_PATH</span><span class="hljs-symbol">:/path/to/install/dir/lib</span><br></code></pre></div></td></tr></table></figure>
-
-<p>用于添加环境变量和依赖库路径. 输入 <code>source ~/.bashrc</code> 使更改生效.</p>
-<p>输入 <code>clp</code>，即可正常显示提示信息：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs undefined">Coin LP <span class="hljs-built_in">version</span> <span class="hljs-number">1.17</span><span class="hljs-number">.6</span>, build Dec <span class="hljs-number">25</span> <span class="hljs-number">2020</span><br>Clp takes input <span class="hljs-keyword">from</span> arguments ( - switches <span class="hljs-keyword">to</span> stdin)<br>Enter ? <span class="hljs-keyword">for</span> <span class="hljs-built_in">list</span> <span class="hljs-keyword">of</span> commands <span class="hljs-keyword">or</span> help<br>Clp:<br></code></pre></div></td></tr></table></figure>
+<h4 id="3-构建和安装"><a href="#3-构建和安装" class="headerlink" title="(3) 构建和安装"></a>(3) 构建和安装</h4><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs undefined"><span class="hljs-bullet">1. </span>cd coin-Clp<br><span class="hljs-bullet">2. </span>./configure -C<br><span class="hljs-bullet">3. </span>make -j<br><span class="hljs-bullet">4. </span>make install<br></code></pre></div></td></tr></table></figure>
 
 <h3 id="3-安装-CMIP"><a href="#3-安装-CMIP" class="headerlink" title="3. 安装 CMIP"></a>3. 安装 CMIP</h3><ul>
 <li><p>解压 cmip.7z</p>
 </li>
-<li><p>将本地与 Clp 相关的文件(主要是有关的头文件和动态库)复制到 <code>cmip/interface/Clp</code> 目录下，参考命令：</p>
-<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs undefined">cp -r ~<span class="hljs-regexp">/coinbrew/</span>dist<span class="hljs-regexp">/include/</span>coin<span class="hljs-regexp">/* XXX/</span>cmip<span class="hljs-regexp">/interface/</span>Clp<span class="hljs-regexp">/header/</span><br>cp -r ~<span class="hljs-regexp">/coinbrew/</span>dist<span class="hljs-regexp">/lib XXX/</span>cmip<span class="hljs-regexp">/interface/</span>Clp<span class="hljs-regexp">/</span><br></code></pre></div></td></tr></table></figure>
+<li><p>配置Clp到cmip：</p>
+</li>
+</ul>
+<figure class="highlight crystal"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs undefined"><span class="hljs-number">1</span>.进入 cmip 目录，生成并进入 interface 目录: mkdir interface &amp;&amp; cd interface.<br><span class="hljs-number">2</span>.生成并进入 Clp 目录: mkdir Clp &amp;&amp; cd Clp.<br><span class="hljs-number">3</span>.生成 header 目录: mkdir header.<br><span class="hljs-number">4</span>.生成 <span class="hljs-class"><span class="hljs-keyword">lib</span> 目录：<span class="hljs-title">mkdir</span> <span class="hljs-title">lib</span></span><br><span class="hljs-number">5</span>.复制 CLP/<span class="hljs-keyword">include</span>/coin/ 下所有头文件到 header 目录下: cp CLP/<span class="hljs-keyword">include</span>/coin/* ./header/<br><span class="hljs-number">6</span>.复制 CLP/<span class="hljs-class"><span class="hljs-keyword">lib</span> 下所有库文件到 <span class="hljs-title">lib</span> 目录下： <span class="hljs-title">cp</span> <span class="hljs-title">CLP</span>/<span class="hljs-title">lib</span>/* ./<span class="hljs-title">lib</span>/</span><br></code></pre></div></td></tr></table></figure>
 
-<p>(PS: 将 <code>~/coinbrew/dist</code> 换为 Clp 的本地安装路径，<code>XXX</code> 换为 cmip 所在路径)</p>
-</li>
-<li><p>在 cmip 目录下执行 <code>make</code></p>
-</li>
+<ul>
+<li>在 cmip 目录下执行 <code>make</code></li>
 </ul>
 <h2 id="二、软件使用"><a href="#二、软件使用" class="headerlink" title="二、软件使用"></a>二、软件使用</h2><p>使用方法：直接在命令行输入命令.</p>
 <p>进入 cmipwork 所在目录，运行命令格式如下：</p>
@@ -293,8 +287,7 @@
 <li>TIME=time ：time 为时间上限，单位为秒，默认值为 7200.</li>
 </ul>
 <h2 id="四、接口参考"><a href="#四、接口参考" class="headerlink" title="四、接口参考"></a>四、接口参考</h2><h3 id="1、环境说明"><a href="#1、环境说明" class="headerlink" title="1、环境说明"></a>1、环境说明</h3><p>需要包含 <code>cmipwork/src/cmip/CMIP.h</code> 文件， </p>
-<h3 id="2、函数声明"><a href="#2、函数声明" class="headerlink" title="2、函数声明"></a>2、函数声明</h3><h4 id="（1）class-CMIP"><a href="#（1）class-CMIP" class="headerlink" title="（1）class CMIP{};"></a>（1）<code>class CMIP{};</code></h4><p>建立CMIP对象： <code>cmip = new CMIP(env)</code>.</p>
-<h4 id="（2）bool-CMIPNewVariables-int-nVars-double-obj-double-lb-double-ub-CMIPVarType-ctype-string-cname"><a href="#（2）bool-CMIPNewVariables-int-nVars-double-obj-double-lb-double-ub-CMIPVarType-ctype-string-cname" class="headerlink" title="（2）bool CMIPNewVariables(int nVars, double* obj, double* lb, double* ub, CMIPVarType* ctype, string* cname);."></a>（2）<code>bool CMIPNewVariables(int nVars, double* obj, double* lb, double* ub, CMIPVarType* ctype, string* cname);</code>.</h4><p>添加变量.</p>
+<h3 id="2、函数声明"><a href="#2、函数声明" class="headerlink" title="2、函数声明"></a>2、函数声明</h3><h4 id="（2）bool-CMIP-CMIPNewVariables-int-nVars-double-obj-double-lb-double-ub-CMIPVarType-ctype-string-cName"><a href="#（2）bool-CMIP-CMIPNewVariables-int-nVars-double-obj-double-lb-double-ub-CMIPVarType-ctype-string-cName" class="headerlink" title="（2）bool CMIP::CMIPNewVariables(int nVars, double* obj, double* lb, double* ub, CMIPVarType* ctype, string* cName);."></a>（2）<code>bool CMIP::CMIPNewVariables(int nVars, double* obj, double* lb, double* ub, CMIPVarType* ctype, string* cName);</code>.</h4><p>添加变量.</p>
 <ul>
 <li><p>nVars - 变量数量.</p>
 </li>
@@ -306,10 +299,10 @@
 </li>
 <li><p>ctype - 变量类型.</p>
 </li>
-<li><p>cname - 变量名称.</p>
+<li><p>cName - 变量名称.</p>
 </li>
 </ul>
-<h4 id="3-bool-CMIPAddConstraints-int-nRows-int-nnz-double-lhs-double-rhs-int-rmatbeg-int-rmatind-double-rmatval-string-cname"><a href="#3-bool-CMIPAddConstraints-int-nRows-int-nnz-double-lhs-double-rhs-int-rmatbeg-int-rmatind-double-rmatval-string-cname" class="headerlink" title="(3) bool CMIPAddConstraints(int nRows, int nnz, double* lhs, double* rhs, int* rmatbeg, int* rmatind, double* rmatval, string* cname);."></a>(3) <code>bool CMIPAddConstraints(int nRows, int nnz, double* lhs, double* rhs, int* rmatbeg, int* rmatind, double* rmatval, string* cname);</code>.</h4><p>添加约束.</p>
+<h4 id="3-bool-CMIPAddConstraints-int-nRows-int-nnz-double-lhs-double-rhs-int-rmatbeg-int-rmatind-double-rmatval-string-cName"><a href="#3-bool-CMIPAddConstraints-int-nRows-int-nnz-double-lhs-double-rhs-int-rmatbeg-int-rmatind-double-rmatval-string-cName" class="headerlink" title="(3) bool CMIPAddConstraints(int nRows, int nnz, double* lhs, double* rhs, int* rmatbeg, int* rmatind, double* rmatval, string* cName);."></a>(3) <code>bool CMIPAddConstraints(int nRows, int nnz, double* lhs, double* rhs, int* rmatbeg, int* rmatind, double* rmatval, string* cName);</code>.</h4><p>添加约束.</p>
 <ul>
 <li><p>nRows   - 约束数量.</p>
 </li>
@@ -326,12 +319,12 @@
 </li>
 <li><p>rmatval - 见<code>rmatbeg</code>.</p>
 </li>
-<li><p>cname   - 约束名称.</p>
+<li><p>cName   - 约束名称.</p>
 </li>
 </ul>
 <h4 id="4-bool-WriteModel-bool-isOriginModel-string-str"><a href="#4-bool-WriteModel-bool-isOriginModel-string-str" class="headerlink" title="(4) bool WriteModel(bool isOriginModel, string str);."></a>(4) <code>bool WriteModel(bool isOriginModel, string str);</code>.</h4><p>输出模型.</p>
 <ul>
-<li><p>isOriginModel   - 是否是原始模型.</p>
+<li><p>isOriginModel   - <code>true</code>为原始模型, <code>false</code>为预处理后模型.</p>
 </li>
 <li><p>str             - 输出文件名(“.mps”后缀的输出mps格式文件，.lp后缀的输出lp格式文件).</p>
 </li>
@@ -372,7 +365,7 @@
                     
                       <a href="/2021/09/15/patoh/patoh/">
                         <span class="hidden-mobile">patoh</span>
-                        <span class="visible-mobile">Next</span>
+                        <span class="visible-mobile">Nächster</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -449,7 +442,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -457,7 +450,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">keyword</label>
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
