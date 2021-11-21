@@ -161,7 +161,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15
+      14
        分钟
     </span>
   
@@ -293,51 +293,47 @@
 <li>TIME=time ：time 为时间上限，单位为秒，默认值为 7200.</li>
 </ul>
 <h2 id="四、接口参考"><a href="#四、接口参考" class="headerlink" title="四、接口参考"></a>四、接口参考</h2><h3 id="1、环境说明"><a href="#1、环境说明" class="headerlink" title="1、环境说明"></a>1、环境说明</h3><p>需要包含 <code>cmipwork/src/cmip/CMIP.h</code> 文件， </p>
-<h3 id="2、模型输入"><a href="#2、模型输入" class="headerlink" title="2、模型输入"></a>2、模型输入</h3><h4 id="（1）首先利用CMIP-cmip-new-CMIP-env-来建立一个CMIP对象"><a href="#（1）首先利用CMIP-cmip-new-CMIP-env-来建立一个CMIP对象" class="headerlink" title="（1）首先利用CMIP* cmip = new CMIP(env) 来建立一个CMIP对象."></a>（1）首先利用<code>CMIP* cmip = new CMIP(env)</code> 来建立一个CMIP对象.</h4><h4 id="（2）利用-cmip-gt-CMIPNewVariables-NVARS-obj-lb-ub-ctype-cname-来添加变量和目标函数"><a href="#（2）利用-cmip-gt-CMIPNewVariables-NVARS-obj-lb-ub-ctype-cname-来添加变量和目标函数" class="headerlink" title="（2）利用 cmip-&gt;CMIPNewVariables(NVARS ,obj ,lb, ub, ctype, cname)来添加变量和目标函数."></a>（2）利用 <code>cmip-&gt;CMIPNewVariables(NVARS ,obj ,lb, ub, ctype, cname)</code>来添加变量和目标函数.</h4><ul>
-<li><p>NVARS - <code>int</code>,变量数量.</p>
+<h3 id="2、函数声明"><a href="#2、函数声明" class="headerlink" title="2、函数声明"></a>2、函数声明</h3><h4 id="（1）class-CMIP"><a href="#（1）class-CMIP" class="headerlink" title="（1）class CMIP{};"></a>（1）<code>class CMIP{};</code></h4><p>建立CMIP对象： <code>cmip = new CMIP(env)</code>.</p>
+<h4 id="（2）bool-CMIPNewVariables-int-nVars-double-obj-double-lb-double-ub-CMIPVarType-ctype-string-cname"><a href="#（2）bool-CMIPNewVariables-int-nVars-double-obj-double-lb-double-ub-CMIPVarType-ctype-string-cname" class="headerlink" title="（2）bool CMIPNewVariables(int nVars, double* obj, double* lb, double* ub, CMIPVarType* ctype, string* cname);."></a>（2）<code>bool CMIPNewVariables(int nVars, double* obj, double* lb, double* ub, CMIPVarType* ctype, string* cname);</code>.</h4><p>添加变量.</p>
+<ul>
+<li><p>nVars - 变量数量.</p>
 </li>
-<li><p>obj   - <code>double*</code>, 目标函数系数.</p>
+<li><p>obj   - 目标函数系数.</p>
 </li>
-<li><p>lb    - <code>double*</code>, 变量下界.</p>
+<li><p>lb    - 变量下界.</p>
 </li>
-<li><p>ub    - <code>double*</code>, 变量上界.</p>
+<li><p>ub    - 变量上界.</p>
 </li>
-<li><p>ctype - <code>CMIPVarType</code>, 变量类型.</p>
+<li><p>ctype - 变量类型.</p>
 </li>
-<li><p>cname - <code>string</code>, 变量名称.</p>
+<li><p>cname - 变量名称.</p>
 </li>
 </ul>
-<h4 id="3-利用-cmip-gt-CMIPAddConstraints-NCONS-nnz-lhs-rhs-rmatbeg-rmatind-rmatval-cname-来添加约束"><a href="#3-利用-cmip-gt-CMIPAddConstraints-NCONS-nnz-lhs-rhs-rmatbeg-rmatind-rmatval-cname-来添加约束" class="headerlink" title="(3) 利用 cmip-&gt;CMIPAddConstraints(NCONS, nnz, lhs, rhs, rmatbeg, rmatind, rmatval, cname) 来添加约束."></a>(3) 利用 <code>cmip-&gt;CMIPAddConstraints(NCONS, nnz, lhs, rhs, rmatbeg, rmatind, rmatval, cname)</code> 来添加约束.</h4><ul>
-<li><p>NCONS   - <code>int</code>, 约束数量.</p>
+<h4 id="3-bool-CMIPAddConstraints-int-nRows-int-nnz-double-lhs-double-rhs-int-rmatbeg-int-rmatind-double-rmatval-string-cname"><a href="#3-bool-CMIPAddConstraints-int-nRows-int-nnz-double-lhs-double-rhs-int-rmatbeg-int-rmatind-double-rmatval-string-cname" class="headerlink" title="(3) bool CMIPAddConstraints(int nRows, int nnz, double* lhs, double* rhs, int* rmatbeg, int* rmatind, double* rmatval, string* cname);."></a>(3) <code>bool CMIPAddConstraints(int nRows, int nnz, double* lhs, double* rhs, int* rmatbeg, int* rmatind, double* rmatval, string* cname);</code>.</h4><p>添加约束.</p>
+<ul>
+<li><p>nRows   - 约束数量.</p>
 </li>
-<li><p>nnz     - <code>int</code>, 非零元数量.</p>
+<li><p>nnz     - 非零元数量.</p>
 </li>
-<li><p>lhs     - <code>double*</code>, 约束左端项.</p>
+<li><p>lhs     - 约束左端项.</p>
 </li>
-<li><p>rhs     - <code>double*</code>, 约束右端项.</p>
+<li><p>rhs     - 约束右端项.</p>
 </li>
-<li><p>rmatbeg - <code>int*</code>, 和<code>rmatind</code>以及<code>rmatval</code>一起定义所要添加的约束. </p>
+<li><p>rmatbeg - 和<code>rmatind</code>以及<code>rmatval</code>一起定义所要添加的约束. </p>
 <p><code>rmatbeg</code>用来定义非零元索引，<br>第i条约束的列标被记录在<code>rmatind[rmatbeg[i]]</code>到<code>rmatind[rmatbeg[i+1]-1]</code>之间.<br>第i条约束的系数被记录在<code>rmatval[rmatbeg[i]]</code>到<code>rmatval[rmatbeg[i+1]-1]</code>之间.</p>
 </li>
-<li><p>rmatind - <code>int*</code>, 见<code>rmatbeg</code>.</p>
+<li><p>rmatind - 见<code>rmatbeg</code>.</p>
 </li>
-<li><p>rmatval - <code>double*</code>, 见<code>rmatbeg</code>.</p>
+<li><p>rmatval - 见<code>rmatbeg</code>.</p>
 </li>
-<li><p>cname   - <code>string</code>,约束名称.</p>
+<li><p>cname   - 约束名称.</p>
 </li>
 </ul>
-<h4 id="4-其他工具"><a href="#4-其他工具" class="headerlink" title="(4) 其他工具"></a>(4) 其他工具</h4><ul>
-<li><p><code>cmip-&gt;WriteModel(true, &quot;origin.mps&quot;)</code> - 输出.mps格式原始文件.</p>
+<h4 id="4-bool-WriteModel-bool-isOriginModel-string-str"><a href="#4-bool-WriteModel-bool-isOriginModel-string-str" class="headerlink" title="(4) bool WriteModel(bool isOriginModel, string str);."></a>(4) <code>bool WriteModel(bool isOriginModel, string str);</code>.</h4><p>输出模型.</p>
+<ul>
+<li><p>isOriginModel   - 是否是原始模型.</p>
 </li>
-<li><p><code>cmip-&gt;WriteModel(true, &quot;origin.lp&quot;)</code>  - 输出.lp格式原始文件.</p>
-</li>
-<li><p><code>string cmip-&gt;origModel-&gt;name</code>         - 原始模型名称.</p>
-</li>
-<li><p><code>string cmip-&gt;origModel-&gt;filename</code>     - 原始文件名称.</p>
-</li>
-<li><p><code>string cmip-&gt;transModel-&gt;filename</code>    - 转化后模型名称.</p>
-</li>
-<li><p><code>string cmip-&gt;transModel-&gt;filename</code>    - 转化后文件名称.</p>
+<li><p>str             - 输出文件名(“.mps”后缀的输出mps格式文件，.lp后缀的输出lp格式文件).</p>
 </li>
 </ul>
 <h3 id="3、示例"><a href="#3、示例" class="headerlink" title="3、示例"></a>3、示例</h3><ul>
