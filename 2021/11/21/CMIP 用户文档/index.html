@@ -151,7 +151,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      942 字
+      943 字
     </span>
   
 
@@ -230,10 +230,13 @@
 <li><p>配置Clp到cmip：</p>
 </li>
 </ul>
-<figure class="highlight crystal"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs undefined"><span class="hljs-number">1</span>.进入 cmip 目录，生成并进入 interface 目录: mkdir interface &amp;&amp; cd interface.<br><span class="hljs-number">2</span>.生成并进入 Clp 目录: mkdir Clp &amp;&amp; cd Clp.<br><span class="hljs-number">3</span>.生成 header 目录: mkdir header.<br><span class="hljs-number">4</span>.生成 <span class="hljs-class"><span class="hljs-keyword">lib</span> 目录：<span class="hljs-title">mkdir</span> <span class="hljs-title">lib</span></span><br><span class="hljs-number">5</span>.复制 CLP/<span class="hljs-keyword">include</span>/coin/ 下所有头文件到 header 目录下: cp CLP/<span class="hljs-keyword">include</span>/coin/* ./header/<br><span class="hljs-number">6</span>.复制 CLP/<span class="hljs-class"><span class="hljs-keyword">lib</span> 下所有库文件到 <span class="hljs-title">lib</span> 目录下： <span class="hljs-title">cp</span> <span class="hljs-title">CLP</span>/<span class="hljs-title">lib</span>/* ./<span class="hljs-title">lib</span>/</span><br></code></pre></div></td></tr></table></figure>
-
+<p>1.进入 <code>cmip</code> 目录，生成并进入 <code>interface</code> 目录: <code>mkdir interface &amp;&amp; cd interface</code>.
+2.生成并进入 <code>Clp</code> 目录: <code>mkdir Clp &amp;&amp; cd Clp</code>.
+3.生成 <code>header</code> 目录: <code>mkdir header</code>.
+4.生成 <code>lib</code> 目录：<code>mkdir lib</code>.
+5.复制 <code>CLP/include/coin/</code> 下所有头文件到 <code>header</code> 目录下: <code>cp CLP/include/coin/* ./header/</code><br>6.复制 <code>CLP/lib</code> 下所有库文件到 <code>lib</code> 目录下： <code>cp CLP/lib/* ./lib/</code></p>
 <ul>
-<li>在 cmip 目录下执行 <code>make</code></li>
+<li>在 <code>cmip</code> 目录下执行 <code>make</code></li>
 </ul>
 <h2 id="二、软件使用"><a href="#二、软件使用" class="headerlink" title="二、软件使用"></a>二、软件使用</h2><p>使用方法：直接在命令行输入命令.</p>
 <p>进入 cmipwork 所在目录，运行命令格式如下：</p>
