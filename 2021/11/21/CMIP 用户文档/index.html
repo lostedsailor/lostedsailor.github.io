@@ -228,13 +228,9 @@
 <li><p>解压 cmip.7z</p>
 </li>
 <li><p>配置Clp到cmip：</p>
+<p>   1.进入 <code>cmip</code> 目录，生成并进入 <code>interface</code> 目录: <code>mkdir interface &amp;&amp; cd interface</code>. <br><br>   2.生成并进入 <code>Clp</code> 目录: <code>mkdir Clp &amp;&amp; cd Clp</code>. <br><br>   3.生成 <code>header</code> 目录: <code>mkdir header</code>. <br><br>   4.生成 <code>lib</code> 目录：<code>mkdir lib</code>. <br><br>   5.复制 <code>CLP/include/coin/</code> 下所有头文件到 <code>header</code> 目录下: <code>cp CLP/include/coin/* ./header/</code> <br><br>   6.复制 <code>CLP/lib</code> 下所有库文件到 <code>lib</code> 目录下： <code>cp CLP/lib/* ./lib/</code> <br></p>
 </li>
 </ul>
-<p>1.进入 <code>cmip</code> 目录，生成并进入 <code>interface</code> 目录: <code>mkdir interface &amp;&amp; cd interface</code>.
-2.生成并进入 <code>Clp</code> 目录: <code>mkdir Clp &amp;&amp; cd Clp</code>.
-3.生成 <code>header</code> 目录: <code>mkdir header</code>.
-4.生成 <code>lib</code> 目录：<code>mkdir lib</code>.
-5.复制 <code>CLP/include/coin/</code> 下所有头文件到 <code>header</code> 目录下: <code>cp CLP/include/coin/* ./header/</code><br>6.复制 <code>CLP/lib</code> 下所有库文件到 <code>lib</code> 目录下： <code>cp CLP/lib/* ./lib/</code></p>
 <ul>
 <li>在 <code>cmip</code> 目录下执行 <code>make</code></li>
 </ul>
@@ -368,7 +364,7 @@
                     
                       <a href="/2021/09/15/patoh/patoh/">
                         <span class="hidden-mobile">patoh</span>
-                        <span class="visible-mobile">Nächster</span>
+                        <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -445,7 +441,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -453,7 +449,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+          <label data-error="x" data-success="v" for="local-search-input">keyword</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
